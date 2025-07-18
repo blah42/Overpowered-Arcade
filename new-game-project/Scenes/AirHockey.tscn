@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8tkx2ybn2r7y"]
+
+[ext_resource type="PackedScene" uid="uid://drayoil0iaghc" path="res://assets/kenney_mini-arcade/Models/GLB format/air-hockey.glb" id="1_gone1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ujrr"]
+size = Vector3(1.03979, 0.567871, 1)
+
+[node name="AirHockey" type="CharacterBody3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="air-hockey2" parent="Node3D" instance=ExtResource("1_gone1")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0118408, 0.248291, 0)
+shape = SubResource("BoxShape3D_7ujrr")
