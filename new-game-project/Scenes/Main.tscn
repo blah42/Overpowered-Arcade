@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1dwu0n16uhxt"]
+[gd_scene load_steps=10 format=3 uid="uid://d1dwu0n16uhxt"]
 
 [ext_resource type="PackedScene" uid="uid://cnsy43flhim3f" path="res://griditems/testing_map.tscn" id="1_r150o"]
-[ext_resource type="Texture2D" uid="uid://d0i20yquvhbea" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_l.png" id="2_jw32o"]
-[ext_resource type="Texture2D" uid="uid://pmg8bvufav46" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_m.png" id="3_50glp"]
-[ext_resource type="Texture2D" uid="uid://dwssluee0w85c" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_r.png" id="4_vy5pj"]
-[ext_resource type="Texture2D" uid="uid://cpwy88wnx7hd4" path="res://assets/kenney_mini-arcade/Previews/arcade-machine.png" id="5_bmxlf"]
-[ext_resource type="Texture2D" uid="uid://cr1bfp47psf1j" path="res://assets/kenney_mini-arcade/Previews/air-hockey.png" id="6_4kpch"]
-[ext_resource type="Texture2D" uid="uid://bd60oxjejtqfl" path="res://assets/kenney_mini-arcade/Previews/basketball-game.png" id="7_grg3l"]
+[ext_resource type="Texture2D" uid="uid://dpisjtie7bt4o" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_l.png" id="2_jw32o"]
+[ext_resource type="Texture2D" uid="uid://dwooadi0hxday" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_m.png" id="3_50glp"]
+[ext_resource type="Texture2D" uid="uid://bjcawx81h5pev" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_r.png" id="4_vy5pj"]
+[ext_resource type="Texture2D" uid="uid://dahog10wowwqv" path="res://assets/kenney_mini-arcade/Previews/arcade-machine.png" id="5_bmxlf"]
+[ext_resource type="Theme" uid="uid://burs0ps80gsj4" path="res://UI/UI_theme.tres" id="5_vy5pj"]
+[ext_resource type="Texture2D" uid="uid://iny8apvvjlmh" path="res://assets/kenney_mini-arcade/Previews/air-hockey.png" id="6_4kpch"]
+[ext_resource type="Texture2D" uid="uid://bfievccggart6" path="res://assets/kenney_cursor-pixel-pack/Tiles/tile_0189.png" id="6_bmxlf"]
+[ext_resource type="Texture2D" uid="uid://bno7r0wkqroq" path="res://assets/kenney_mini-arcade/Previews/basketball-game.png" id="7_grg3l"]
+
 
 [node name="Main" type="Node3D"]
 
@@ -56,6 +59,32 @@ layout_mode = 2
 texture = ExtResource("4_vy5pj")
 expand_mode = 3
 
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera3D/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -3.945
+anchor_bottom = -3.945
+offset_left = 10.0
+offset_top = -3.98499
+offset_right = 97.0
+offset_bottom = 47.015
+theme = ExtResource("5_vy5pj")
+theme_override_constants/separation = 5
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Camera3D/Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Camera3D/Control/HBoxContainer/AspectRatioContainer"]
+layout_mode = 2
+texture = ExtResource("6_bmxlf")
+
+[node name="Money" type="RichTextLabel" parent="Camera3D/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_vy5pj")
+text = "10"
+vertical_alignment = 1
+
 [node name="ScrollContainer" type="ScrollContainer" parent="Camera3D/Control"]
 layout_mode = 2
 offset_left = 45.0
@@ -79,18 +108,6 @@ texture_normal = ExtResource("6_4kpch")
 [node name="TextureButton2" type="TextureButton" parent="Camera3D/Control/ScrollContainer/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("7_grg3l")
-
-[node name="TextureRect" type="TextureRect" parent="Camera3D/Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.019
-anchor_top = 0.188
-anchor_right = 0.035
-anchor_bottom = 0.315
-offset_left = -27.793
-offset_top = -540.876
-offset_right = -0.145
-offset_bottom = -517.005
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69097, 12.6923, 8.39325)
