@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://gp2ypwtceage"]
+
+[ext_resource type="PackedScene" uid="uid://ckwvh7dhhgon6" path="res://assets/kenney_mini-arcade/Models/GLB format/basketball-game.glb" id="1_ank7h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_avbc2"]
+size = Vector3(0.742676, 0.876434, 1.03119)
+
+[node name="BasketballGame" type="CharacterBody3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="basketball-game2" parent="Node3D" instance=ExtResource("1_ank7h")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00298572, 0.424729, 0.00850731)
+shape = SubResource("BoxShape3D_avbc2")
