@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cs1v6rijrg3pd"]
+[gd_scene load_steps=3 format=3 uid="uid://d1msymj81bq6c"]
 
-[ext_resource type="PackedScene" uid="uid://dora3gqyh1fu7" path="res://assets/kenney_mini-arcade/Models/GLB format/pinball.glb" id="1_fna3o"]
+[ext_resource type="PackedScene" uid="uid://cw3wccse1rcum" path="res://assets/kenney_mini-arcade/Models/GLB format/pinball.glb" id="1_fna3o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dbepd"]
 size = Vector3(1, 0.765594, 0.823608)

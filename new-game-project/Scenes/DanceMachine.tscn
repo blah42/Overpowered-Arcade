@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwlj3mxswvqo0"]
+[gd_scene load_steps=3 format=3 uid="uid://cfqy6ujgy4r0q"]
 
-[ext_resource type="PackedScene" uid="uid://6eo8spqw1w84" path="res://assets/kenney_mini-arcade/Models/GLB format/dance-machine.glb" id="1_qwvfs"]
+[ext_resource type="PackedScene" uid="uid://bjra5f6hhttwp" path="res://assets/kenney_mini-arcade/Models/GLB format/dance-machine.glb" id="1_qwvfs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rjk6v"]
 size = Vector3(1, 0.990356, 1)

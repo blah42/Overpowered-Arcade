@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://gp2ypwtceage"]
+[gd_scene load_steps=3 format=3 uid="uid://5o1sdcbmma8k"]
 
-[ext_resource type="PackedScene" uid="uid://ckwvh7dhhgon6" path="res://assets/kenney_mini-arcade/Models/GLB format/basketball-game.glb" id="1_ank7h"]
+[ext_resource type="PackedScene" uid="uid://3rs0nxvhfy6n" path="res://assets/kenney_mini-arcade/Models/GLB format/basketball-game.glb" id="1_ank7h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_avbc2"]
 size = Vector3(0.742676, 0.876434, 1.03119)
