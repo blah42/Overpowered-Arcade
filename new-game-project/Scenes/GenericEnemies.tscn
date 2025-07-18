@@ -1,9 +1,36 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxheuw5r48qrp"]
+[gd_scene load_steps=6 format=3 uid="uid://ddbd77whg8g7p"]
 
-[ext_resource type="PackedScene" uid="uid://ywilg18hadmr" path="res://assets/kenney_mini-arcade/Models/GLB format/character-gamer.glb" id="1_xipmv"]
+[ext_resource type="PackedScene" uid="uid://dgvbyaq87dsdl" path="res://assets/kenney_mini-arcade/Models/GLB format/character-gamer.glb" id="1_xipmv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k1y1j"]
 size = Vector3(1, 0.769958, 0.531403)
+
+[sub_resource type="Animation" id="Animation_k1y1j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/character-gamer2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/character-gamer2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_xipmv"]
 resource_name = "walk"
@@ -23,33 +50,6 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = false
-tracks/1/path = NodePath("Pivot/character-gamer2:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_k1y1j"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Pivot/character-gamer2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/path = NodePath("Pivot/character-gamer2:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
