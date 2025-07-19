@@ -1,32 +1,41 @@
-[gd_scene load_steps=23 format=3 uid="uid://d1dwu0n16uhxt"]
+[gd_scene load_steps=25 format=3 uid="uid://4sc41am4axat"]
 
-[ext_resource type="Script" uid="uid://b8mgwjyhy08u2" path="res://Scripts/Main.gd" id="1_4kpch"]
-[ext_resource type="PackedScene" uid="uid://cnsy43flhim3f" path="res://Scenes/testing_map.tscn" id="1_r150o"]
-[ext_resource type="Texture2D" uid="uid://d0i20yquvhbea" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_l.png" id="2_jw32o"]
-[ext_resource type="Texture2D" uid="uid://pmg8bvufav46" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_m.png" id="3_50glp"]
-[ext_resource type="Script" uid="uid://0h4v6vvfa257" path="res://Scripts/buy_bar.gd" id="3_frkhe"]
-[ext_resource type="Texture2D" uid="uid://dwssluee0w85c" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_r.png" id="4_vy5pj"]
-[ext_resource type="Texture2D" uid="uid://cpwy88wnx7hd4" path="res://assets/kenney_mini-arcade/Previews/arcade-machine.png" id="5_bmxlf"]
-[ext_resource type="Theme" uid="uid://burs0ps80gsj4" path="res://UI/UI_theme.tres" id="5_vy5pj"]
-[ext_resource type="Texture2D" uid="uid://cr1bfp47psf1j" path="res://assets/kenney_mini-arcade/Previews/air-hockey.png" id="6_4kpch"]
-[ext_resource type="Texture2D" uid="uid://c64182xqvd60s" path="res://assets/kenney_cursor-pixel-pack/Tiles/tile_0189.png" id="6_bmxlf"]
-[ext_resource type="Texture2D" uid="uid://5uy4r84r1ddk" path="res://assets/kenney_1-bit-input-prompts-pixel-16/Tiles (White)/tile_0327.png" id="7_bmxlf"]
-[ext_resource type="Texture2D" uid="uid://bd60oxjejtqfl" path="res://assets/kenney_mini-arcade/Previews/basketball-game.png" id="7_grg3l"]
-[ext_resource type="Script" uid="uid://cql5wssue6c8q" path="res://Scripts/air_hockey_button.gd" id="8_grg3l"]
-[ext_resource type="Texture2D" uid="uid://57udx3qquuv6" path="res://assets/kenney_mini-arcade/Previews/dance-machine.png" id="10_3tgeq"]
-[ext_resource type="Script" uid="uid://doh31hs5q7cy6" path="res://Scripts/ddr_button.gd" id="11_c4ay3"]
-[ext_resource type="Script" uid="uid://bojleugdts2aj" path="res://Scripts/basketball_button.gd" id="13_aht7i"]
-[ext_resource type="Script" uid="uid://bdn7kvjdylf08" path="res://Scripts/Souls.gd" id="13_h1m7h"]
-[ext_resource type="Script" uid="uid://cdbk7xuq5qxp7" path="res://Scripts/score_updater.gd" id="14_1p5hy"]
-[ext_resource type="Texture2D" uid="uid://b0esk27fyso2b" path="res://assets/kenney_mini-arcade/Previews/pinball.png" id="16_4n42c"]
-[ext_resource type="Script" uid="uid://brltjte5kv2fc" path="res://Scripts/pinball_button.gd" id="17_c5snn"]
-[ext_resource type="Texture2D" uid="uid://k5l0sxjrgx76" path="res://assets/kenney_mini-arcade/Previews/vending-machine.png" id="18_xvtyr"]
-[ext_resource type="Script" uid="uid://bpbwqadutusbk" path="res://Scripts/vending_machine_button.gd" id="19_u7mjy"]
+[ext_resource type="Script" uid="uid://b8mgwjyhy08u2" path="res://Scripts/Main.gd" id="1_s6u0c"]
+[ext_resource type="PackedScene" uid="uid://cnsy43flhim3f" path="res://Scenes/testing_map.tscn" id="2_8oguj"]
+[ext_resource type="PackedScene" uid="uid://ddbd77whg8g7p" path="res://Scenes/GenericEnemies.tscn" id="2_itutq"]
+[ext_resource type="Script" uid="uid://0h4v6vvfa257" path="res://Scripts/buy_bar.gd" id="3_itutq"]
+[ext_resource type="Texture2D" uid="uid://d0i20yquvhbea" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_l.png" id="4_03b0x"]
+[ext_resource type="Texture2D" uid="uid://pmg8bvufav46" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_m.png" id="5_u4f86"]
+[ext_resource type="Texture2D" uid="uid://dwssluee0w85c" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_r.png" id="6_7hqgk"]
+[ext_resource type="Texture2D" uid="uid://cpwy88wnx7hd4" path="res://assets/kenney_mini-arcade/Previews/arcade-machine.png" id="7_0tbr0"]
+[ext_resource type="Texture2D" uid="uid://cr1bfp47psf1j" path="res://assets/kenney_mini-arcade/Previews/air-hockey.png" id="8_3etok"]
+[ext_resource type="Script" uid="uid://cql5wssue6c8q" path="res://Scripts/air_hockey_button.gd" id="9_lmf2e"]
+[ext_resource type="Texture2D" uid="uid://57udx3qquuv6" path="res://assets/kenney_mini-arcade/Previews/dance-machine.png" id="10_7rstn"]
+[ext_resource type="Script" uid="uid://doh31hs5q7cy6" path="res://Scripts/ddr_button.gd" id="11_v6up8"]
+[ext_resource type="Texture2D" uid="uid://bd60oxjejtqfl" path="res://assets/kenney_mini-arcade/Previews/basketball-game.png" id="12_ofhto"]
+[ext_resource type="Script" uid="uid://bojleugdts2aj" path="res://Scripts/basketball_button.gd" id="13_4lviy"]
+[ext_resource type="Texture2D" uid="uid://b0esk27fyso2b" path="res://assets/kenney_mini-arcade/Previews/pinball.png" id="14_jyghu"]
+[ext_resource type="Script" uid="uid://brltjte5kv2fc" path="res://Scripts/pinball_button.gd" id="15_4dvep"]
+[ext_resource type="Texture2D" uid="uid://k5l0sxjrgx76" path="res://assets/kenney_mini-arcade/Previews/vending-machine.png" id="16_g66gb"]
+[ext_resource type="Script" uid="uid://bpbwqadutusbk" path="res://Scripts/vending_machine_button.gd" id="17_mbyc6"]
+[ext_resource type="Theme" uid="uid://burs0ps80gsj4" path="res://UI/UI_theme.tres" id="18_uohre"]
+[ext_resource type="Texture2D" uid="uid://c64182xqvd60s" path="res://assets/kenney_cursor-pixel-pack/Tiles/tile_0189.png" id="19_p7ea2"]
+[ext_resource type="Script" uid="uid://bdn7kvjdylf08" path="res://Scripts/Souls.gd" id="20_berjd"]
+[ext_resource type="Texture2D" uid="uid://5uy4r84r1ddk" path="res://assets/kenney_1-bit-input-prompts-pixel-16/Tiles (White)/tile_0327.png" id="21_d41x0"]
+[ext_resource type="Script" uid="uid://cdbk7xuq5qxp7" path="res://Scripts/score_updater.gd" id="22_lwby8"]
+
+[sub_resource type="Curve3D" id="Curve3D_s6u0c"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.32186, -1.8377, 0.015059, 0, 0, 0, 0, 0, 0, -1.59548, -1.74509, -2.16906, 0, 0, 0, 0, 0, 0, 3.61849, -1.66733, 0.552178, 0, 0, 0, 0, 0, 0, 9.19612, -1.74898, 0.349509),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
 
 [node name="Main" type="Node3D"]
-script = ExtResource("1_4kpch")
+script = ExtResource("1_s6u0c")
+mob_scene = ExtResource("2_itutq")
 
-[node name="Node3D" parent="." instance=ExtResource("1_r150o")]
+[node name="Node3D" parent="." instance=ExtResource("2_8oguj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35559, 0, -4.25476)
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -53,7 +62,7 @@ visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("3_frkhe")
+script = ExtResource("3_itutq")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Camera3D/Control/buy_bar"]
 layout_mode = 2
@@ -67,7 +76,7 @@ alignment = 1
 
 [node name="endr" type="TextureRect" parent="Camera3D/Control/buy_bar/HBoxContainer2"]
 layout_mode = 2
-texture = ExtResource("2_jw32o")
+texture = ExtResource("4_03b0x")
 expand_mode = 3
 
 [node name="center" type="TextureRect" parent="Camera3D/Control/buy_bar/HBoxContainer2"]
@@ -75,12 +84,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 9.17
 localize_numeral_system = false
-texture = ExtResource("3_50glp")
+texture = ExtResource("5_u4f86")
 expand_mode = 2
 
 [node name="endl" type="TextureRect" parent="Camera3D/Control/buy_bar/HBoxContainer2"]
 layout_mode = 2
-texture = ExtResource("4_vy5pj")
+texture = ExtResource("6_7hqgk")
 expand_mode = 3
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Camera3D/Control/buy_bar"]
@@ -97,32 +106,32 @@ layout_mode = 2
 
 [node name="ArcadeButton" type="TextureButton" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("5_bmxlf")
+texture_normal = ExtResource("7_0tbr0")
 
 [node name="AirHockeyButton" type="TextureButton" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("6_4kpch")
-script = ExtResource("8_grg3l")
+texture_normal = ExtResource("8_3etok")
+script = ExtResource("9_lmf2e")
 
 [node name="DDRButton" type="TextureButton" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("10_3tgeq")
-script = ExtResource("11_c4ay3")
+texture_normal = ExtResource("10_7rstn")
+script = ExtResource("11_v6up8")
 
 [node name="BasketballButton" type="TextureButton" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("7_grg3l")
-script = ExtResource("13_aht7i")
+texture_normal = ExtResource("12_ofhto")
+script = ExtResource("13_4lviy")
 
 [node name="PinballButton" type="TextureButton" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("16_4n42c")
-script = ExtResource("17_c5snn")
+texture_normal = ExtResource("14_jyghu")
+script = ExtResource("15_4dvep")
 
 [node name="VendingMachineButton" type="TextureButton" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("18_xvtyr")
-script = ExtResource("19_u7mjy")
+texture_normal = ExtResource("16_g66gb")
+script = ExtResource("17_mbyc6")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Camera3D/Control"]
 layout_mode = 1
@@ -135,7 +144,7 @@ offset_left = 2.35403
 offset_top = 5.06226
 offset_right = 89.354
 offset_bottom = 30.0623
-theme = ExtResource("5_vy5pj")
+theme = ExtResource("18_uohre")
 theme_override_constants/separation = 5
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="Camera3D/Control/HBoxContainer"]
@@ -143,14 +152,14 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Camera3D/Control/HBoxContainer/AspectRatioContainer"]
 layout_mode = 2
-texture = ExtResource("6_bmxlf")
+texture = ExtResource("19_p7ea2")
 
 [node name="Money" type="RichTextLabel" parent="Camera3D/Control/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("5_vy5pj")
+theme = ExtResource("18_uohre")
 vertical_alignment = 1
-script = ExtResource("13_h1m7h")
+script = ExtResource("20_berjd")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Camera3D/Control"]
 layout_mode = 1
@@ -163,7 +172,7 @@ offset_left = -0.478394
 offset_top = 1.95224
 offset_right = 178.522
 offset_bottom = 39.9522
-theme = ExtResource("5_vy5pj")
+theme = ExtResource("18_uohre")
 theme_override_constants/separation = 5
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="Camera3D/Control/HBoxContainer3"]
@@ -171,14 +180,14 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Camera3D/Control/HBoxContainer3/AspectRatioContainer"]
 layout_mode = 2
-texture = ExtResource("7_bmxlf")
+texture = ExtResource("21_d41x0")
 
 [node name="Score" type="RichTextLabel" parent="Camera3D/Control/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("5_vy5pj")
+theme = ExtResource("18_uohre")
 vertical_alignment = 1
-script = ExtResource("14_1p5hy")
+script = ExtResource("22_lwby8")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 debug_shape_custom_color = Color(0.819608, 0, 0, 1)
@@ -188,6 +197,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69097, 12.6923, 8.39325)
 light_energy = 16.0
 light_size = 1.0
 omni_range = 74.225
+
+[node name="MobTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="SpawnPath" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.49405, 0)
+curve = SubResource("Curve3D_s6u0c")
+
+[node name="ArcadeUnits" type="Node3D" parent="."]
 
 [connection signal="make_menu_bar_invisible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_invisible"]
 [connection signal="make_menu_bar_visible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_visible"]
@@ -199,3 +217,4 @@ omni_range = 74.225
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/BasketballButton" to="." method="_on_basketball_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/PinballButton" to="." method="_on_pinball_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/VendingMachineButton" to="." method="_on_vending_machine_button_pressed"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

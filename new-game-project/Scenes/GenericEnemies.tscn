@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://ddbd77whg8g7p"]
 
 [ext_resource type="Script" uid="uid://27y757nl5fd5" path="res://Scripts/GenericEnemy.gd" id="1_k1y1j"]
-[ext_resource type="PackedScene" uid="uid://dgvbyaq87dsdl" path="res://assets/kenney_mini-arcade/Models/GLB format/character-gamer.glb" id="1_xipmv"]
+[ext_resource type="PackedScene" uid="uid://6c8pvo5xduin" path="res://assets/kenney_mini-arcade/Models/GLB format/character-gamer.glb" id="1_xipmv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k1y1j"]
-size = Vector3(1, 0.769958, 0.531403)
+size = Vector3(0.465332, 0.445419, 0.531403)
 
 [sub_resource type="Animation" id="Animation_k1y1j"]
 length = 0.001
@@ -75,7 +75,7 @@ script = ExtResource("1_k1y1j")
 [node name="character-gamer2" parent="Pivot" instance=ExtResource("1_xipmv")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.385868, 0.00715637)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0114746, 0.352718, 0.00715637)
 shape = SubResource("BoxShape3D_k1y1j")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dpbo2e5rno6ss"]
 
-[ext_resource type="PackedScene" uid="uid://cnsy43flhim3f" path="res://griditems/testing_map.tscn" id="1_182k5"]
+[ext_resource type="PackedScene" uid="uid://cnsy43flhim3f" path="res://Scenes/testing_map.tscn" id="1_182k5"]
 [ext_resource type="Script" uid="uid://bd3ldacgs730g" path="res://Scripts/Spawning.gd" id="1_mneyp"]
 [ext_resource type="Texture2D" uid="uid://d0i20yquvhbea" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_l.png" id="2_36lpf"]
 [ext_resource type="PackedScene" uid="uid://ddbd77whg8g7p" path="res://Scenes/GenericEnemies.tscn" id="2_u4nf1"]
@@ -13,10 +13,10 @@
 [sub_resource type="Curve3D" id="Curve3D_mneyp"]
 bake_interval = 30.35
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5.51473, -0.53836, -1.63009, 0, 0, 0, 0, 0, 0, -4.90899, -0.500025, -1.89678, 0, 0, 0, 0, 0, 0, -3.90354, -0.500025, -2.64568, 0, 0, 0, 0, 0, 0, -2.51621, -0.48133, -2.93467, 0, 0, 0, 0, 0, 0, -0.176001, -0.449794, -2.26345, 0, 0, 0, 0, 0, 0, 2.11738, -0.444096, -0.989637, 0, 0, 0, 0, 0, 0, 4.40832, -0.438281, -0.0418352, 0, 0, 0, 0, 0, 0, 6.66649, -0.432611, 0.739532),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -12.363, -0.53836, -1.63009, 0, 0, 0, 0, 0, 0, -7.73341, -0.500025, -1.89678, 0, 0, 0, 0, 0, 0, -3.90354, -0.500025, -2.64568, 0, 0, 0, 0, 0, 0, -2.51621, -0.48133, -2.93467),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
 }
-point_count = 8
+point_count = 4
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_mneyp")
@@ -111,10 +111,12 @@ light_size = 1.0
 omni_range = 74.225
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
 autostart = true
 
 [node name="SpawnPath" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90457, 4.95803)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.64035, 2.01424, 1.19625)
+top_level = true
 curve = SubResource("Curve3D_mneyp")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
