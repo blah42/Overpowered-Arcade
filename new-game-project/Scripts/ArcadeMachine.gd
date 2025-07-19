@@ -4,3 +4,4 @@ extends Node
 @export var multi = false
 @export var type = 0
 @export var stats = [1, 1, 1, 1]
+@export var taken = false

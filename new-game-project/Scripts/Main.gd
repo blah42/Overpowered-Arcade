@@ -15,6 +15,7 @@ signal make_menu_bar_invisible;
 signal souls_changed;
 signal score_changed;
 @onready var cam: Camera3D = $Camera3D
+@export var mob_scene: PackedScene
 
 func _on_build_tile_button_pressed():
 	#make click sound
@@ -30,7 +31,7 @@ func _on_build_success_airhockey():
 	new_item.position = selected_object.position;
 	print(selected_object.position)
 	new_item.position.y = new_item.position.y+.5 
-	add_child(new_item)
+	$ArcadeUnits.add_child(new_item)
 	make_menu_bar_invisible.emit();
 	pass # Replace with function body.
 func _on_build_success_ddr():
@@ -39,7 +40,7 @@ func _on_build_success_ddr():
 	new_item.position = selected_object.position;
 	print(selected_object.position)
 	new_item.position.y = new_item.position.y+.5 
-	add_child(new_item)
+	$ArcadeUnits.add_child(new_item)
 	make_menu_bar_invisible.emit();
 	pass # Replace with function body.
 func _on_build_success_basketball():
@@ -48,7 +49,7 @@ func _on_build_success_basketball():
 	new_item.position = selected_object.position;
 	print(selected_object.position)
 	new_item.position.y = new_item.position.y+.5 
-	add_child(new_item)
+	$ArcadeUnits.add_child(new_item)
 	make_menu_bar_invisible.emit();
 	pass # Replace with function body.
 func _on_build_success_arcade():
@@ -57,7 +58,7 @@ func _on_build_success_arcade():
 	new_item.position = selected_object.position;
 	print(selected_object.position)
 	new_item.position.y = new_item.position.y+.5 
-	add_child(new_item)
+	$ArcadeUnits.add_child(new_item)
 	make_menu_bar_invisible.emit();
 	pass # Replace with function body.
 func _on_build_success_pinball():
@@ -66,7 +67,7 @@ func _on_build_success_pinball():
 	new_item.position = selected_object.position;
 	print(selected_object.position)
 	new_item.position.y = new_item.position.y+.5 
-	add_child(new_item)
+	$ArcadeUnits.add_child(new_item)
 	make_menu_bar_invisible.emit();
 	pass # Replace with function body.
 func _on_build_success_vend():
@@ -75,7 +76,7 @@ func _on_build_success_vend():
 	new_item.position = selected_object.position;
 	print(selected_object.position)
 	new_item.position.y = new_item.position.y+.5 
-	add_child(new_item)
+	$ArcadeUnits.add_child(new_item)
 	make_menu_bar_invisible.emit();
 	pass # Replace with function body.
 #####################################################################################################
@@ -196,3 +197,26 @@ func _on_arcade_button_pressed() -> void:
 	setSouls($Camera3D/Control/HBoxContainer/Money.souls - cost);
 	_on_build_success_arcade()
 	pass # Replace with function body.
+
+
+func _on_mob_timer_timeout() -> void:
+	# Create a new instance of the Mob scene.
+	var mob = mob_scene.instantiate()
+
+	# Choose a random location on the SpawnPath.
+	# We store the reference to the SpawnLocation node.
+	#var mob_spawn_location = get_node("SpawnPath/SpawnLocation")
+	var sourcePath = $SpawnPath
+	var dupliPath = sourcePath.duplicate()
+	add_child(dupliPath)
+	var pathTracker = PathFollow3D.new()
+	pathTracker.loop = false
+	dupliPath.add_child(pathTracker)
+
+	pathTracker.progress_ratio = 0
+	mob.initialize(dupliPath, pathTracker, $ArcadeUnits)
+
+	# Spawn the mob by adding it to the Main scene.
+	#add_child(mob)
+	var location = pathTracker.get_path()
+	get_tree().get_root().get_node(location).add_child(mob)

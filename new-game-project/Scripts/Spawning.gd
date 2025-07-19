@@ -15,10 +15,12 @@ func _on_timer_timeout() -> void:
 	#var mob_spawn_location = get_node("SpawnPath/SpawnLocation")
 	var pathTracker = PathFollow3D.new()
 	pathTracker.loop = false
+	pathTracker.top_level = false
 	$SpawnPath.add_child(pathTracker)
+	#pathTracker.transform.Rotation
 
 	pathTracker.progress_ratio = 0
-	mob.initialize(pathTracker.position, pathTracker)
+	mob.initialize($SpawnPath, pathTracker, $Node3D)
 
 	# Spawn the mob by adding it to the Main scene.
 	#add_child(mob)
