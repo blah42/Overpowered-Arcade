@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://d1dwu0n16uhxt"]
+[gd_scene load_steps=25 format=3 uid="uid://d1dwu0n16uhxt"]
 
 [ext_resource type="Script" uid="uid://b8mgwjyhy08u2" path="res://Scripts/Main.gd" id="1_4kpch"]
 [ext_resource type="PackedScene" uid="uid://cnsy43flhim3f" path="res://Scenes/testing_map.tscn" id="1_r150o"]
 [ext_resource type="Texture2D" uid="uid://d0i20yquvhbea" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_l.png" id="2_jw32o"]
+[ext_resource type="PackedScene" uid="uid://ddbd77whg8g7p" path="res://Scenes/GenericEnemies.tscn" id="2_jyqft"]
 [ext_resource type="Texture2D" uid="uid://pmg8bvufav46" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_m.png" id="3_50glp"]
 [ext_resource type="Script" uid="uid://0h4v6vvfa257" path="res://Scripts/buy_bar.gd" id="3_frkhe"]
 [ext_resource type="Texture2D" uid="uid://dwssluee0w85c" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_r.png" id="4_vy5pj"]
@@ -23,8 +24,16 @@
 [ext_resource type="Texture2D" uid="uid://k5l0sxjrgx76" path="res://assets/kenney_mini-arcade/Previews/vending-machine.png" id="18_xvtyr"]
 [ext_resource type="Script" uid="uid://bpbwqadutusbk" path="res://Scripts/vending_machine_button.gd" id="19_u7mjy"]
 
+[sub_resource type="Curve3D" id="Curve3D_hwpts"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.28262, 0.603353, 0.367939, 0, 0, 0, 0, 0, 0, -2.165, 0.895825, -1.45079, 0, 0, 0, 0, 0, 0, 3.68186, 0.595111, -0.176958, 0, 0, 0, 0, 0, 0, 6.56609, 0.769048, 0.190941),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
 [node name="Main" type="Node3D"]
 script = ExtResource("1_4kpch")
+mob_scene = ExtResource("2_jyqft")
 
 [node name="Node3D" parent="." instance=ExtResource("1_r150o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35559, 0, -4.25476)
@@ -189,6 +198,14 @@ light_energy = 16.0
 light_size = 1.0
 omni_range = 74.225
 
+[node name="MobTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="SpawnPath" type="Path3D" parent="."]
+curve = SubResource("Curve3D_hwpts")
+
+[node name="ArcadeUnits" type="Node3D" parent="."]
+
 [connection signal="make_menu_bar_invisible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_invisible"]
 [connection signal="make_menu_bar_visible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_visible"]
 [connection signal="score_changed" from="." to="Camera3D/Control/HBoxContainer3/Score" method="_on_main_score_changed"]
@@ -199,3 +216,4 @@ omni_range = 74.225
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/BasketballButton" to="." method="_on_basketball_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/PinballButton" to="." method="_on_pinball_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/VendingMachineButton" to="." method="_on_vending_machine_button_pressed"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

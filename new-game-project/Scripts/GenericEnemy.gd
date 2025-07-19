@@ -31,6 +31,7 @@ func _physics_process(_delta):
 		else:
 			acquiring = true
 			print("Machine Detected")
+			#nextPoint = path.
 			characterPath.curve.addPoint()
 			pass
 	#print(path.progress)
