@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://d1dwu0n16uhxt"]
+[gd_scene load_steps=27 format=3 uid="uid://d1dwu0n16uhxt"]
 
 [ext_resource type="Script" uid="uid://b8mgwjyhy08u2" path="res://Scripts/Main.gd" id="1_4kpch"]
 [ext_resource type="PackedScene" uid="uid://cnsy43flhim3f" path="res://Scenes/testing_map.tscn" id="1_r150o"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://bd60oxjejtqfl" path="res://assets/kenney_mini-arcade/Previews/basketball-game.png" id="7_grg3l"]
 [ext_resource type="Script" uid="uid://cql5wssue6c8q" path="res://Scripts/air_hockey_button.gd" id="8_grg3l"]
 [ext_resource type="Texture2D" uid="uid://57udx3qquuv6" path="res://assets/kenney_mini-arcade/Previews/dance-machine.png" id="10_3tgeq"]
+[ext_resource type="Script" uid="uid://qhuy4h4gmqxf" path="res://Scripts/arcade_button.gd" id="9_c4ay3"]
+[ext_resource type="Texture2D" uid="uid://dd1d83bone00y" path="res://assets/kenney_mini-arcade/Previews/dance-machine.png" id="10_3tgeq"]
 [ext_resource type="Script" uid="uid://doh31hs5q7cy6" path="res://Scripts/ddr_button.gd" id="11_c4ay3"]
 [ext_resource type="Script" uid="uid://bojleugdts2aj" path="res://Scripts/basketball_button.gd" id="13_aht7i"]
 [ext_resource type="Script" uid="uid://bdn7kvjdylf08" path="res://Scripts/Souls.gd" id="13_h1m7h"]
@@ -59,7 +61,6 @@ offset_right = 1147.39
 offset_bottom = 127.192
 
 [node name="buy_bar" type="Control" parent="Camera3D/Control"]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -108,31 +109,87 @@ layout_mode = 2
 [node name="ArcadeButton" type="TextureButton" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("5_bmxlf")
+script = ExtResource("9_c4ay3")
+
+[node name="Panel" type="Label" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/ArcadeButton"]
+visible = false
+layout_mode = 0
+offset_left = 21.0
+offset_top = 17.0001
+offset_right = 42.0
+offset_bottom = 40.0001
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "10"
 
 [node name="AirHockeyButton" type="TextureButton" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("6_4kpch")
 script = ExtResource("8_grg3l")
 
+[node name="Panel" type="Label" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/AirHockeyButton"]
+visible = false
+offset_left = 21.0
+offset_top = 17.0001
+offset_right = 42.0
+offset_bottom = 40.0001
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "10"
+
 [node name="DDRButton" type="TextureButton" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("10_3tgeq")
 script = ExtResource("11_c4ay3")
+
+[node name="Panel" type="Label" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/DDRButton"]
+visible = false
+offset_left = 21.0
+offset_top = 17.0001
+offset_right = 42.0
+offset_bottom = 40.0001
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "10"
 
 [node name="BasketballButton" type="TextureButton" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("7_grg3l")
 script = ExtResource("13_aht7i")
 
+[node name="Panel" type="Label" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/BasketballButton"]
+visible = false
+offset_left = 21.0
+offset_top = 17.0001
+offset_right = 42.0
+offset_bottom = 40.0001
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "10"
+
 [node name="PinballButton" type="TextureButton" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("16_4n42c")
 script = ExtResource("17_c5snn")
 
+[node name="Panel" type="Label" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/PinballButton"]
+visible = false
+offset_left = 21.0
+offset_top = 17.0001
+offset_right = 42.0
+offset_bottom = 40.0001
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "10"
+
 [node name="VendingMachineButton" type="TextureButton" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("18_xvtyr")
 script = ExtResource("19_u7mjy")
+
+[node name="Panel" type="Label" parent="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/VendingMachineButton"]
+visible = false
+offset_left = 21.0
+offset_top = 17.0001
+offset_right = 42.0
+offset_bottom = 40.0001
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "10"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Camera3D/Control"]
 layout_mode = 1
@@ -191,6 +248,7 @@ vertical_alignment = 1
 script = ExtResource("14_1p5hy")
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="Camera3D/Control"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.84
@@ -239,11 +297,23 @@ curve = SubResource("Curve3D_hwpts")
 [connection signal="make_menu_bar_visible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_visible"]
 [connection signal="score_changed" from="." to="Camera3D/Control/HBoxContainer3/Score" method="_on_main_score_changed"]
 [connection signal="souls_changed" from="." to="Camera3D/Control/HBoxContainer/Money" method="_on_main_souls_changed"]
+[connection signal="mouse_entered" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/ArcadeButton" to="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/ArcadeButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/ArcadeButton" to="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/ArcadeButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/ArcadeButton" to="." method="_on_arcade_button_pressed"]
+[connection signal="mouse_entered" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/AirHockeyButton" to="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/AirHockeyButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/AirHockeyButton" to="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/AirHockeyButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/AirHockeyButton" to="." method="_on_air_hockey_button_pressed"]
+[connection signal="mouse_entered" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/DDRButton" to="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/DDRButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/DDRButton" to="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/DDRButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/DDRButton" to="." method="_on_ddr_button_pressed"]
+[connection signal="mouse_entered" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/BasketballButton" to="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/BasketballButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/BasketballButton" to="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/BasketballButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/BasketballButton" to="." method="_on_basketball_button_pressed"]
+[connection signal="mouse_entered" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/PinballButton" to="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/PinballButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/PinballButton" to="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/PinballButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/PinballButton" to="." method="_on_pinball_button_pressed"]
+[connection signal="mouse_entered" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/VendingMachineButton" to="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/VendingMachineButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/VendingMachineButton" to="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/VendingMachineButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/VendingMachineButton" to="." method="_on_vending_machine_button_pressed"]
 [connection signal="payUp" from="Camera3D/Control/HBoxContainer4/timer" to="." method="_on_timer_pay_up"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
