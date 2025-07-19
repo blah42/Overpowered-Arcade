@@ -29,7 +29,7 @@ func _on_build_success_airhockey():
 	#make click sound
 	var new_item = air_hockey.instantiate();
 	new_item.position = selected_object.position;
-	print(selected_object.position)
+	#print(selected_object.position)
 	new_item.position.y = new_item.position.y+.5 
 	$ArcadeUnits.add_child(new_item)
 	make_menu_bar_invisible.emit();
@@ -38,7 +38,7 @@ func _on_build_success_ddr():
 	#make click sound
 	var new_item = dance.instantiate();
 	new_item.position = selected_object.position;
-	print(selected_object.position)
+	#print(selected_object.position)
 	new_item.position.y = new_item.position.y+.5 
 	$ArcadeUnits.add_child(new_item)
 	make_menu_bar_invisible.emit();
@@ -47,7 +47,7 @@ func _on_build_success_basketball():
 	#make click sound
 	var new_item = basketball.instantiate();
 	new_item.position = selected_object.position;
-	print(selected_object.position)
+	#print(selected_object.position)
 	new_item.position.y = new_item.position.y+.5 
 	$ArcadeUnits.add_child(new_item)
 	make_menu_bar_invisible.emit();
@@ -56,7 +56,7 @@ func _on_build_success_arcade():
 	#make click sound
 	var new_item = arcade_machine.instantiate();
 	new_item.position = selected_object.position;
-	print(selected_object.position)
+	#print(selected_object.position)
 	new_item.position.y = new_item.position.y+.5 
 	$ArcadeUnits.add_child(new_item)
 	make_menu_bar_invisible.emit();
@@ -65,7 +65,7 @@ func _on_build_success_pinball():
 	#make click sound
 	var new_item = pinball.instantiate();
 	new_item.position = selected_object.position;
-	print(selected_object.position)
+	#print(selected_object.position)
 	new_item.position.y = new_item.position.y+.5 
 	$ArcadeUnits.add_child(new_item)
 	make_menu_bar_invisible.emit();
@@ -74,7 +74,7 @@ func _on_build_success_vend():
 	#make click sound
 	var new_item = vendingMachine.instantiate();
 	new_item.position = selected_object.position;
-	print(selected_object.position)
+	#print(selected_object.position)
 	new_item.position.y = new_item.position.y+.5 
 	$ArcadeUnits.add_child(new_item)
 	make_menu_bar_invisible.emit();
@@ -106,7 +106,7 @@ func _input(event: InputEvent) -> void:
 			var object = colission.collider
 			match object.name:
 				"Placement_tile":
-					print(object.global_position)
+					#print(object.global_position)
 					selected_object = colission;
 					selected_object.position.x = object.global_position.x;
 					selected_object.position.y = object.global_position.y;
