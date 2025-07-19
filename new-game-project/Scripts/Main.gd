@@ -224,5 +224,5 @@ func _on_mob_timer_timeout() -> void:
 
 
 func _on_timer_pay_up() -> void:
-	setSouls($Camera3D/Control/HBoxContainer/Money.souls - $Camera3D/Control/HBoxContainer3/Timer.pay_ammount)
+	setSouls($Camera3D/Control/HBoxContainer/Money.souls - $Camera3D/Control/HBoxContainer4/timer.pay_ammount)
 	pass # Replace with function body.

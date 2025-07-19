@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b8mgwjyhy08u2" path="res://Scripts/Main.gd" id="1_4kpch"]
 [ext_resource type="PackedScene" uid="uid://cnsy43flhim3f" path="res://Scenes/testing_map.tscn" id="1_r150o"]
 [ext_resource type="Texture2D" uid="uid://7al216188uu3" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_l.png" id="2_jw32o"]
+[ext_resource type="PackedScene" uid="uid://ddbd77whg8g7p" path="res://Scenes/GenericEnemies.tscn" id="2_jyqft"]
 [ext_resource type="Texture2D" uid="uid://tp8jk8wqqv16" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_m.png" id="3_50glp"]
 [ext_resource type="Script" uid="uid://0h4v6vvfa257" path="res://Scripts/buy_bar.gd" id="3_frkhe"]
 [ext_resource type="Texture2D" uid="uid://0q7wa0m1bcle" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_r.png" id="4_vy5pj"]
@@ -22,7 +23,7 @@
 [ext_resource type="Script" uid="uid://brltjte5kv2fc" path="res://Scripts/pinball_button.gd" id="17_c5snn"]
 [ext_resource type="Texture2D" uid="uid://c4f3lt6ke8vuq" path="res://assets/kenney_mini-arcade/Previews/vending-machine.png" id="18_xvtyr"]
 [ext_resource type="Script" uid="uid://bpbwqadutusbk" path="res://Scripts/vending_machine_button.gd" id="19_u7mjy"]
-[ext_resource type="Script" uid="uid://nox86twqpnv8" path="res://Scripts/time_to_pay.gd" id="24_3tgeq"]
+[ext_resource type="Script" uid="uid://nox86twqpnv8" path="res://Scripts/time_to_pay.gd" id="21_3tgeq"]
 
 [sub_resource type="Curve3D" id="Curve3D_hwpts"]
 _data = {
@@ -136,14 +137,14 @@ script = ExtResource("19_u7mjy")
 [node name="HBoxContainer" type="HBoxContainer" parent="Camera3D/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.018
-anchor_top = -3.906
-anchor_right = 0.018
-anchor_bottom = -3.906
-offset_left = 2.35403
-offset_top = 5.06226
-offset_right = 89.354
-offset_bottom = 30.0623
+anchor_left = 0.019
+anchor_top = -3.654
+anchor_right = 0.019
+anchor_bottom = -3.654
+offset_left = 0.207035
+offset_top = 0.0582581
+offset_right = 87.207
+offset_bottom = 25.0583
 theme = ExtResource("5_vy5pj")
 theme_override_constants/separation = 5
 
@@ -161,45 +162,17 @@ theme = ExtResource("5_vy5pj")
 vertical_alignment = 1
 script = ExtResource("13_h1m7h")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Camera3D/Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.018
-anchor_top = -3.906
-anchor_right = 0.018
-anchor_bottom = -3.906
-offset_left = 2.35403
-offset_top = 5.06226
-offset_right = 89.354
-offset_bottom = 30.0623
-theme = ExtResource("5_vy5pj")
-theme_override_constants/separation = 5
-
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Camera3D/Control/HBoxContainer2"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Camera3D/Control/HBoxContainer2/AspectRatioContainer"]
-layout_mode = 2
-texture = ExtResource("6_bmxlf")
-
-[node name="Money" type="RichTextLabel" parent="Camera3D/Control/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("5_vy5pj")
-vertical_alignment = 1
-script = ExtResource("13_h1m7h")
-
 [node name="HBoxContainer3" type="HBoxContainer" parent="Camera3D/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.02
-anchor_top = -3.874
-anchor_right = 0.02
-anchor_bottom = -3.874
-offset_left = 2.06004
-offset_top = 28.9983
-offset_right = 130.06
-offset_bottom = 51.9983
+anchor_left = 0.84
+anchor_top = -3.976
+anchor_right = 0.84
+anchor_bottom = -3.976
+offset_left = -0.478394
+offset_top = 1.95224
+offset_right = 178.522
+offset_bottom = 39.9522
 theme = ExtResource("5_vy5pj")
 theme_override_constants/separation = 5
 
@@ -210,23 +183,24 @@ layout_mode = 2
 layout_mode = 2
 texture = ExtResource("7_bmxlf")
 
-[node name="Timer" type="RichTextLabel" parent="Camera3D/Control/HBoxContainer3"]
+[node name="Score" type="RichTextLabel" parent="Camera3D/Control/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_vy5pj")
 vertical_alignment = 1
-script = ExtResource("24_3tgeq")
+script = ExtResource("14_1p5hy")
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="Camera3D/Control"]
-layout_mode = 2
-anchor_left = 0.02
-anchor_top = -3.866
-anchor_right = 0.02
-anchor_bottom = -3.866
-offset_left = 939.06
-offset_top = -2.01773
-offset_right = 1074.06
-offset_bottom = 22.9823
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.84
+anchor_top = -3.976
+anchor_right = 0.84
+anchor_bottom = -3.976
+offset_left = -941.478
+offset_top = 68.9522
+offset_right = -762.478
+offset_bottom = 106.952
 theme = ExtResource("5_vy5pj")
 theme_override_constants/separation = 5
 
@@ -237,12 +211,12 @@ layout_mode = 2
 layout_mode = 2
 texture = ExtResource("7_bmxlf")
 
-[node name="Score" type="RichTextLabel" parent="Camera3D/Control/HBoxContainer4"]
+[node name="timer" type="RichTextLabel" parent="Camera3D/Control/HBoxContainer4"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_vy5pj")
 vertical_alignment = 1
-script = ExtResource("14_1p5hy")
+script = ExtResource("21_3tgeq")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 debug_shape_custom_color = Color(0.819608, 0, 0, 1)
@@ -263,7 +237,7 @@ curve = SubResource("Curve3D_hwpts")
 
 [connection signal="make_menu_bar_invisible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_invisible"]
 [connection signal="make_menu_bar_visible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_visible"]
-[connection signal="score_changed" from="." to="Camera3D/Control/HBoxContainer4/Score" method="_on_main_score_changed"]
+[connection signal="score_changed" from="." to="Camera3D/Control/HBoxContainer3/Score" method="_on_main_score_changed"]
 [connection signal="souls_changed" from="." to="Camera3D/Control/HBoxContainer/Money" method="_on_main_souls_changed"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/ArcadeButton" to="." method="_on_arcade_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/AirHockeyButton" to="." method="_on_air_hockey_button_pressed"]
@@ -271,5 +245,5 @@ curve = SubResource("Curve3D_hwpts")
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/BasketballButton" to="." method="_on_basketball_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/PinballButton" to="." method="_on_pinball_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/VendingMachineButton" to="." method="_on_vending_machine_button_pressed"]
-[connection signal="payUp" from="Camera3D/Control/HBoxContainer3/Timer" to="." method="_on_timer_pay_up"]
+[connection signal="payUp" from="Camera3D/Control/HBoxContainer4/timer" to="." method="_on_timer_pay_up"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
