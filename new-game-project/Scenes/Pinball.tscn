@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1msymj81bq6c"]
+[gd_scene load_steps=4 format=3 uid="uid://d1msymj81bq6c"]
 
-[ext_resource type="PackedScene" uid="uid://cw3wccse1rcum" path="res://assets/kenney_mini-arcade/Models/GLB format/pinball.glb" id="1_fna3o"]
+[ext_resource type="Script" uid="uid://knqmgpyise32" path="res://Scripts/ArcadeMachine.gd" id="1_dbepd"]
+[ext_resource type="PackedScene" uid="uid://dd3sm8sn7oo03" path="res://assets/kenney_mini-arcade/Models/GLB format/pinball.glb" id="1_fna3o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dbepd"]
 size = Vector3(1, 0.765594, 0.823608)
 
 [node name="Pinball" type="CharacterBody3D"]
+script = ExtResource("1_dbepd")
 
 [node name="Node3D" type="Node3D" parent="."]
 
