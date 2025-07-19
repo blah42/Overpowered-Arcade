@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Kearney-Jam-Please-Change"
-run/main_scene="res://griditems/testing_map.tscn"
+run/main_scene="uid://d1dwu0n16uhxt"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
