@@ -1,4 +1,4 @@
 extends RichTextLabel
-
+@export var souls = 100;
 func _on_main_souls_changed():
-	$self.Text = str($Main.Souls);
+	self.text = str(souls);
