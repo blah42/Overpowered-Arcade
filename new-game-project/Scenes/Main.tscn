@@ -22,7 +22,6 @@
 [node name="Main" type="Node3D"]
 script = ExtResource("1_4kpch")
 
-
 [node name="Node3D" parent="." instance=ExtResource("1_r150o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35559, 0, -4.25476)
 
