@@ -26,10 +26,10 @@
 
 [sub_resource type="Curve3D" id="Curve3D_s6u0c"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.32186, -1.8377, 0.015059, 0, 0, 0, 0, 0, 0, -1.59548, -1.74509, -2.16906, 0, 0, 0, 0, 0, 0, 3.61849, -1.66733, 0.552178, 0, 0, 0, 0, 0, 0, 9.19612, -1.74898, 0.349509),
-"tilts": PackedFloat32Array(0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.32186, -1.8377, 0.015059, 0, 0, 0, 0, 0, 0, 9.19612, -1.74898, 0.349509),
+"tilts": PackedFloat32Array(0, 0)
 }
-point_count = 4
+point_count = 2
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_s6u0c")
@@ -199,10 +199,12 @@ light_size = 1.0
 omni_range = 74.225
 
 [node name="MobTimer" type="Timer" parent="."]
+wait_time = 3.942
+one_shot = true
 autostart = true
 
 [node name="SpawnPath" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.49405, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.49405, 0.177313)
 curve = SubResource("Curve3D_s6u0c")
 
 [node name="ArcadeUnits" type="Node3D" parent="."]

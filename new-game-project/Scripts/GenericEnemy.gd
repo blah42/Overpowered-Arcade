@@ -25,16 +25,16 @@ func _physics_process(_delta):
 		#look_at(global_position + offset, Vector3.UP)
 	path.progress	+= character_speed*_delta
 	for child in detector.get_children():
-		if(child.taken):
-			print("Ignoring Machine")
-			pass
-		else:
+		if((not child.taken) and path.position.x<child.position.x):
 			acquiring = true
 			print("Machine Detected")
-			#nextPoint = path.
-			characterPath.curve.addPoint()
+			#nextPoint = path.add_point(,,)
+			characterPath.curve.add_point(child.position,Vector3(0,0,0),Vector3(0,0,0),(characterPath.curve.point_count-1))
 			pass
-	#print(path.progress)
+		else:
+			print("Ignored")
+			pass
+	#print($GenericEnemies.Transform.position.x)
 	if path.progress_ratio==1:
 		queue_free()
 
