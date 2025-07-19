@@ -57,11 +57,8 @@ func _physics_process(_delta):
 		$AnimationPlayer.play("death",-1,5);
 		await get_tree().create_timer(.2).timeout
 		finishedPlaying()
-		#print(totalSouls)
-		#var temp = get_node(totalSouls)
-		#print(temp)
-		get_node(totalSouls).souls += soulWorth
-		#print(totalSouls)
+		get_parent().get_parent().get_parent().get_node(totalSouls).souls += soulWorth
+		get_parent().get_parent().get_parent().get_node(totalSouls).text = str(get_parent().get_parent().get_parent().get_node(totalSouls).souls)
 		queue_free()
 
 # This function will be called from the Main scene.
