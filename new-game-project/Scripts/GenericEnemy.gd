@@ -11,9 +11,9 @@ var acquiring = false
 var soulWorth = 10
 var playTime = 50
 var playing = false
-@export var totalSouls = 0
+var totalSouls : String
+#signal soulsAbsorbed
 var arcadeTitle : CharacterBody3D
-#@onready var _nav_agent := $NavigationAgent3D as NavigationAgent3D
 
 func _physics_process(_delta):
 	if not playing:
@@ -57,12 +57,15 @@ func _physics_process(_delta):
 		$AnimationPlayer.play("death",-1,5);
 		await get_tree().create_timer(.2).timeout
 		finishedPlaying()
-		totalSouls += soulWorth
-		print(totalSouls)
+		#print(totalSouls)
+		#var temp = get_node(totalSouls)
+		#print(temp)
+		get_node(totalSouls).souls += soulWorth
+		#print(totalSouls)
 		queue_free()
 
 # This function will be called from the Main scene.
-func initialize(startPath:Path3D, chosenPath: PathFollow3D, detection: Node3D, souls):
+func initialize(startPath:Path3D, chosenPath: PathFollow3D, detection: Node3D, souls: String):
 	totalSouls = souls
 	characterPath = startPath
 	detector = detection
