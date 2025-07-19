@@ -20,7 +20,7 @@ func _on_timer_timeout() -> void:
 	#pathTracker.transform.Rotation
 
 	pathTracker.progress_ratio = 0
-	mob.initialize($SpawnPath, pathTracker, $Node3D)
+	mob.initialize($SpawnPath, pathTracker, $Node3D, 0)
 
 	# Spawn the mob by adding it to the Main scene.
 	#add_child(mob)

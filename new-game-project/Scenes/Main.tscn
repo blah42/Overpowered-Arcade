@@ -212,6 +212,7 @@ layout_mode = 2
 texture = ExtResource("7_bmxlf")
 
 [node name="timer" type="RichTextLabel" parent="Camera3D/Control/HBoxContainer4"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_vy5pj")
