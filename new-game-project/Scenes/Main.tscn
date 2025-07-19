@@ -24,7 +24,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35559, 0, -4.25476)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.618175, 0.78604, 0, -0.78604, 0.618175, 0, 8.36385, 6.28376)
+projection = 1
 fov = 73.6312
+size = 10.91
+near = 0.001
+far = 200.0
 
 [node name="Control" type="Control" parent="Camera3D"]
 layout_mode = 3
@@ -151,6 +155,9 @@ size_flags_horizontal = 3
 theme = ExtResource("5_vy5pj")
 vertical_alignment = 1
 script = ExtResource("14_1p5hy")
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+debug_shape_custom_color = Color(0.819608, 0, 0, 1)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69097, 12.6923, 8.39325)
