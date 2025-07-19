@@ -51,6 +51,8 @@ func _physics_process(_delta):
 	if path.progress_ratio==1:
 		queue_free()
 	if health == 0:
+		$AnimationPlayer.play("death",-1,5);
+		await get_tree().create_timer(.2).timeout
 		finishedPlaying()
 		totalSouls += soulWorth
 		print(totalSouls)
