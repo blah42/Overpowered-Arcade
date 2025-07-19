@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ddbd77whg8g7p"]
 
 [ext_resource type="Script" uid="uid://27y757nl5fd5" path="res://Scripts/GenericEnemy.gd" id="1_k1y1j"]
-[ext_resource type="PackedScene" uid="uid://dvysjm5fcqqwn" path="res://assets/kenney_mini-arcade/Models/GLB format/character-gamer.glb" id="1_xipmv"]
+[ext_resource type="PackedScene" uid="uid://6c8pvo5xduin" path="res://assets/kenney_mini-arcade/Models/GLB format/character-gamer.glb" id="1_xipmv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k1y1j"]
 size = Vector3(0.465332, 0.445419, 0.531403)

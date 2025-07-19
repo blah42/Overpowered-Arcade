@@ -5,6 +5,8 @@ extends Node
 @export var type = 0
 @export var stats = [1, 1, 1, 1]
 @export var taken = false
-@export var damage = 10
+@export var damage = 1
+@export var timeSuck = 30
 
-func initialize()
+func _ready():
+	pass
