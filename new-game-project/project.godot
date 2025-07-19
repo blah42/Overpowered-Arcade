@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Kearney-Jam-Please-Change"
+config/name="Overpowered-Arcade"
 run/main_scene="uid://d1dwu0n16uhxt"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="uid://e8firloca4ww"
+config/icon="uid://b2t5fcj6aqlq8"
 
 [rendering]
 
