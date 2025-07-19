@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=8 format=3 uid="uid://burs0ps80gsj4"]
 
-[ext_resource type="FontFile" uid="uid://bar6esrdlccmg" path="res://assets/kenney_ui-pack-space-expansion/Font/Kenney Future.ttf" id="1_or1tn"]
-[ext_resource type="FontFile" uid="uid://bcehmjyyak28" path="res://assets/kenney_ui-pack/Font/Kenney Future Narrow.ttf" id="2_evktb"]
+[ext_resource type="FontFile" uid="uid://b26fh6nbulj3p" path="res://assets/kenney_ui-pack-space-expansion/Font/Kenney Future.ttf" id="1_or1tn"]
+[ext_resource type="FontFile" uid="uid://d4hjunjdu61hp" path="res://assets/kenney_ui-pack/Font/Kenney Future Narrow.ttf" id="2_evktb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1rkr"]
 content_margin_left = 4.0
