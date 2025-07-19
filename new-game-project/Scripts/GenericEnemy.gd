@@ -52,11 +52,8 @@ func _physics_process(_delta):
 		queue_free()
 	if health == 0:
 		finishedPlaying()
-		#print(totalSouls)
-		#var temp = get_node(totalSouls)
-		#print(temp)
-		get_node(totalSouls).souls += soulWorth
-		#print(totalSouls)
+		get_parent().get_parent().get_parent().get_node(totalSouls).souls += soulWorth
+		get_parent().get_parent().get_parent().get_node(totalSouls).text = str(get_parent().get_parent().get_parent().get_node(totalSouls).souls)
 		queue_free()
 
 # This function will be called from the Main scene.
