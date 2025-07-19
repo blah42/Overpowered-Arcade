@@ -47,9 +47,14 @@ func _input(event: InputEvent) -> void:
 		if(colission):
 			var object = colission.collider
 			if(object.name == "Placement_tile"):
-				print("tile_clicked")
+				print(object.global_position)
 				selected_object = colission;
+				selected_object.position.x = object.global_position.x;
+				selected_object.position.y = object.global_position.y;
+				selected_object.position.z = object.global_position.z+.25;
 				_on_build_tile_button_pressed()
+			elif(object.name == "AirHockey"):
+				print("Remove?")
 			else:
 				make_menu_bar_invisible.emit()
 				
