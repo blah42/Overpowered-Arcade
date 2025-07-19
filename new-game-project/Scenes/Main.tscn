@@ -42,6 +42,7 @@ offset_right = 1147.39
 offset_bottom = 127.192
 
 [node name="buy_bar" type="Control" parent="Camera3D/Control"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -165,6 +166,8 @@ light_energy = 16.0
 light_size = 1.0
 omni_range = 74.225
 
+[connection signal="make_menu_bar_invisible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_invisible"]
+[connection signal="make_menu_bar_visible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_visible"]
 [connection signal="score_changed" from="." to="Camera3D/Control/HBoxContainer3/Score" method="_on_main_score_changed"]
 [connection signal="souls_changed" from="." to="Camera3D/Control/HBoxContainer/Money" method="_on_main_souls_changed"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/AirHockeyButton" to="." method="_on_air_hockey_button_pressed"]
