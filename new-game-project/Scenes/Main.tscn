@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cr1bfp47psf1j" path="res://assets/kenney_mini-arcade/Previews/air-hockey.png" id="6_4kpch"]
 [ext_resource type="Texture2D" uid="uid://bd60oxjejtqfl" path="res://assets/kenney_mini-arcade/Previews/basketball-game.png" id="7_grg3l"]
 
-[node name="Main" type="Node3D"]
+[node name="Main2" type="Node3D"]
 
 [node name="Node3D" parent="." instance=ExtResource("1_r150o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35559, 0, -4.25476)

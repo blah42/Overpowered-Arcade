@@ -1,28 +1,43 @@
 extends CharacterBody3D
 # Minimum speed of the mob in meters per second.
-@export var min_speed = 10
 # Maximum speed of the mob in meters per second.
-@export var max_speed = 18
+@export var character_speed = 4
+@export var path : PathFollow3D
+@onready var _nav_agent := $NavigationAgent3D as NavigationAgent3D
 
+var _nav_path_line: Line3D
 func _physics_process(_delta):
-	move_and_slide()
+	#if _nav_agent.is_navigation_finished():
+		#return
+#
+	#var next_position := _nav_agent.get_next_path_position()
+	#var offset := next_position - global_position
+	#global_position = global_position.move_toward(next_position, _delta * character_speed)
+#
+	## Make the robot look at the direction we're traveling.
+	## Clamp Y to 0 so the robot only looks left and right, not up/down.
+	#offset.y = 0
+	#if not offset.is_zero_approx():
+		#look_at(global_position + offset, Vector3.UP)
+	path.progress	+= character_speed*_delta
 
 # This function will be called from the Main scene.
-func initialize(start_position):
+func initialize(start_position, chosenPath: PathFollow3D):
 	# We position the mob by placing it at start_position
 	# and rotate it towards player_position, so it looks at the player.
+	path = chosenPath
 	look_at_from_position(start_position, Vector3.FORWARD, Vector3.UP)
 	# Rotate this mob randomly within range of -45 and +45 degrees,
 	# so that it doesn't move directly towards the player.
-	rotate_y(randf_range(-PI / 4, PI / 4))
+	#rotate_y(randf_range(-PI / 4, PI / 4))
 
 	# We calculate a random speed (integer)
-	var random_speed = randi_range(min_speed, max_speed)
+	#var random_speed = randi_range(min_speed, max_speed)
 	# We calculate a forward velocity that represents the speed.
-	velocity = Vector3.FORWARD * random_speed
+	#velocity = Vector3.FORWARD * random_speed
 	# We then rotate the velocity vector based on the mob's Y rotation
 	# in order to move in the direction the mob is looking.
-	velocity = velocity.rotated(Vector3.UP, rotation.y)
+	#velocity = velocity.rotated(Vector3.UP, rotation.y)
 
 func _on_visible_on_screen_notifier_3d_screen_exited():
 	queue_free()

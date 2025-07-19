@@ -12,7 +12,8 @@ func _on_timer_timeout() -> void:
 
 
 
-	mob.initialize(mob_spawn_location.position)
+	mob.initialize($StartLocation.position, mob_spawn_location)
 
 	# Spawn the mob by adding it to the Main scene.
-	add_child(mob)
+	#add_child(mob)
+	$SpawnPath/SpawnLocation.add_child(mob)
