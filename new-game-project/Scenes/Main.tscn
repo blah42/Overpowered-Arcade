@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=16 format=3 uid="uid://d1dwu0n16uhxt"]
 
 [ext_resource type="Script" uid="uid://b8mgwjyhy08u2" path="res://Scripts/Main.gd" id="1_4kpch"]
@@ -5,11 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://dpisjtie7bt4o" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_l.png" id="2_jw32o"]
 [ext_resource type="Texture2D" uid="uid://dwooadi0hxday" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_m.png" id="3_50glp"]
 [ext_resource type="Script" uid="uid://0h4v6vvfa257" path="res://Scripts/buy_bar.gd" id="3_frkhe"]
+
 [ext_resource type="Texture2D" uid="uid://bjcawx81h5pev" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_r.png" id="4_vy5pj"]
 [ext_resource type="Texture2D" uid="uid://dahog10wowwqv" path="res://assets/kenney_mini-arcade/Previews/arcade-machine.png" id="5_bmxlf"]
 [ext_resource type="Theme" uid="uid://burs0ps80gsj4" path="res://UI/UI_theme.tres" id="5_vy5pj"]
 [ext_resource type="Texture2D" uid="uid://iny8apvvjlmh" path="res://assets/kenney_mini-arcade/Previews/air-hockey.png" id="6_4kpch"]
 [ext_resource type="Texture2D" uid="uid://bfievccggart6" path="res://assets/kenney_cursor-pixel-pack/Tiles/tile_0189.png" id="6_bmxlf"]
+
 [ext_resource type="Texture2D" uid="uid://bjd406ru51nkt" path="res://assets/kenney_1-bit-input-prompts-pixel-16/Tiles (White)/tile_0327.png" id="7_bmxlf"]
 [ext_resource type="Texture2D" uid="uid://bno7r0wkqroq" path="res://assets/kenney_mini-arcade/Previews/basketball-game.png" id="7_grg3l"]
 [ext_resource type="Script" uid="uid://cql5wssue6c8q" path="res://Scripts/air_hockey_button.gd" id="8_grg3l"]
@@ -18,6 +21,7 @@
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_4kpch")
+
 
 [node name="Node3D" parent="." instance=ExtResource("1_r150o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35559, 0, -4.25476)
@@ -44,6 +48,7 @@ offset_bottom = 40.0
 script = ExtResource("3_frkhe")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Camera3D/Control/buy_bar"]
+
 layout_mode = 2
 offset_left = -1.0
 offset_top = 2.41754
@@ -54,11 +59,13 @@ theme_override_constants/separation = 0
 alignment = 1
 
 [node name="endr" type="TextureRect" parent="Camera3D/Control/buy_bar/HBoxContainer2"]
+
 layout_mode = 2
 texture = ExtResource("2_jw32o")
 expand_mode = 3
 
 [node name="center" type="TextureRect" parent="Camera3D/Control/buy_bar/HBoxContainer2"]
+
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 9.17
@@ -66,10 +73,13 @@ localize_numeral_system = false
 texture = ExtResource("3_50glp")
 expand_mode = 2
 
+
 [node name="endl" type="TextureRect" parent="Camera3D/Control/buy_bar/HBoxContainer2"]
+
 layout_mode = 2
 texture = ExtResource("4_vy5pj")
 expand_mode = 3
+
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Camera3D/Control/buy_bar"]
 layout_mode = 2
@@ -107,6 +117,7 @@ offset_left = 2.35403
 offset_top = 5.06226
 offset_right = 89.354
 offset_bottom = 30.0623
+
 theme = ExtResource("5_vy5pj")
 theme_override_constants/separation = 5
 
@@ -121,6 +132,7 @@ texture = ExtResource("6_bmxlf")
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_vy5pj")
+
 vertical_alignment = 1
 script = ExtResource("13_h1m7h")
 
@@ -152,12 +164,15 @@ theme = ExtResource("5_vy5pj")
 vertical_alignment = 1
 script = ExtResource("14_1p5hy")
 
+
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69097, 12.6923, 8.39325)
 light_energy = 16.0
 light_size = 1.0
 omni_range = 74.225
 
+
 [connection signal="score_changed" from="." to="Camera3D/Control/HBoxContainer3/Score" method="_on_main_score_changed"]
 [connection signal="souls_changed" from="." to="Camera3D/Control/HBoxContainer/Money" method="_on_main_souls_changed"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/AirHockeyButton" to="." method="_on_air_hockey_button_pressed"]
+
