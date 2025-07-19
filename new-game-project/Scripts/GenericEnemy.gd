@@ -3,7 +3,7 @@ extends CharacterBody3D
 # Maximum speed of the mob in meters per second.
 @export var character_speed = 4
 @export var path : PathFollow3D
-@onready var _nav_agent := $NavigationAgent3D as NavigationAgent3D
+#@onready var _nav_agent := $NavigationAgent3D as NavigationAgent3D
 
 var _nav_path_line: Line3D
 func _physics_process(_delta):
@@ -20,6 +20,7 @@ func _physics_process(_delta):
 	#if not offset.is_zero_approx():
 		#look_at(global_position + offset, Vector3.UP)
 	path.progress	+= character_speed*_delta
+	#print(path.progress)
 
 # This function will be called from the Main scene.
 func initialize(start_position, chosenPath: PathFollow3D):
