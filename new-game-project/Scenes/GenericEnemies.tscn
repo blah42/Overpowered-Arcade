@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://ddbd77whg8g7p"]
 
 [ext_resource type="Script" uid="uid://27y757nl5fd5" path="res://Scripts/GenericEnemy.gd" id="1_k1y1j"]
-[ext_resource type="PackedScene" uid="uid://6c8pvo5xduin" path="res://assets/kenney_mini-arcade/Models/GLB format/character-gamer.glb" id="1_xipmv"]
+[ext_resource type="PackedScene" uid="uid://dvysjm5fcqqwn" path="res://assets/kenney_mini-arcade/Models/GLB format/character-gamer.glb" id="1_xipmv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k1y1j"]
 size = Vector3(0.465332, 0.445419, 0.531403)
@@ -42,21 +42,21 @@ tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0)
 
 [sub_resource type="Animation" id="Animation_xjy82"]
 resource_name = "death"
-length = 3.0
+length = 1.4
 tracks/0/type = "position_3d"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0.0333333, 1, 0, 0, 0, 0.666667, 1, 0, 0.5, 0.26, 2.9, 1, 0, 0.5, 0.5)
+tracks/0/keys = PackedFloat32Array(0.0333333, 1, 0, 0, 0, 0.666667, 1, 0, 0.05, 0.026, 1.13333, 1, 0, 0.05, 0.05)
 tracks/1/type = "scale_3d"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0.3, 1, 1, 1, 1, 2.9, 1, 0.01, 0.01, 0.01)
+tracks/1/keys = PackedFloat32Array(0.133333, 1, 1, 1, 1, 1.13333, 1, 0.01, 0.01, 0.01)
 
 [sub_resource type="Animation" id="Animation_fh2bc"]
 resource_name = "playing"
@@ -78,6 +78,7 @@ tracks/1/keys = PackedFloat32Array(0.0666667, 1, 0, 0, 0, 1, 0.266667, 1, 0, 0, 
 
 [sub_resource type="Animation" id="Animation_xipmv"]
 resource_name = "walk"
+length = 0.3
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -86,10 +87,10 @@ tracks/0/path = NodePath("Pivot/character-gamer2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.0333333, 0.233333),
+"transitions": PackedFloat32Array(1.14104, 1.21551),
 "update": 0,
-"values": [Vector3(0, 0.1, 0), Vector3(0, 0, 0)]
+"values": [Vector3(0, 0.2, 0), Vector3(0, 0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false

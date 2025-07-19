@@ -17,9 +17,11 @@ var arcadeTitle : CharacterBody3D
 
 func _physics_process(_delta):
 	if not playing:
+		$AnimationPlayer.play("walk",-1,1);
 		path.progress	+= character_speed*_delta
 	else:
 		print(health)
+		$AnimationPlayer.play("playing",-1,5);
 		health -= soulDrain
 		playTime -= 1
 		if playTime == 0:
@@ -45,12 +47,15 @@ func _physics_process(_delta):
 		if (characterPath.curve.get_point_position((characterPath.curve.point_count-2)).distance_to(path.position)<0.5):
 			acquiring = false
 			playing = true
+			$AnimationPlayer.play("playing",-1,5);
 			print("Acquired")
 	#print($GenericEnemies.Transform.position.x)
 
 	if path.progress_ratio==1:
 		queue_free()
 	if health == 0:
+		$AnimationPlayer.play("death",-1,5);
+		await get_tree().create_timer(.2).timeout
 		finishedPlaying()
 		#print(totalSouls)
 		#var temp = get_node(totalSouls)
