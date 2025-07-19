@@ -197,6 +197,7 @@ func _on_arcade_button_pressed() -> void:
 	setSouls($Camera3D/Control/HBoxContainer/Money.souls - cost);
 	_on_build_success_arcade()
 	pass # Replace with function body.
+	
 
 
 func _on_mob_timer_timeout() -> void:
@@ -220,3 +221,8 @@ func _on_mob_timer_timeout() -> void:
 	#add_child(mob)
 	var location = pathTracker.get_path()
 	get_tree().get_root().get_node(location).add_child(mob)
+
+
+func _on_timer_pay_up() -> void:
+	setSouls($Camera3D/Control/HBoxContainer/Money.souls - $Camera3D/Control/HBoxContainer3/Timer.pay_ammount)
+	pass # Replace with function body.

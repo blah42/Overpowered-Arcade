@@ -24,16 +24,16 @@ func _physics_process(_delta):
 	#if not offset.is_zero_approx():
 		#look_at(global_position + offset, Vector3.UP)
 	path.progress	+= character_speed*_delta
-	for child in detector.get_children():
-		if(child.taken):
-			print("Ignoring Machine")
-			pass
-		else:
-			acquiring = true
-			print("Machine Detected")
-			#nextPoint = path.
-			characterPath.curve.addPoint()
-			pass
+	#for child in detector.get_children():
+		#if(child.taken):
+			#print("Ignoring Machine")
+			#pass
+		#else:
+			#acquiring = true
+			#print("Machine Detected")
+			##nextPoint = path.
+			#characterPath.curve.addPoint()
+			#pass
 	#print(path.progress)
 	if path.progress_ratio==1:
 		queue_free()
