@@ -196,3 +196,6 @@ func _on_arcade_button_pressed() -> void:
 	setSouls($Camera3D/Control/HBoxContainer/Money.souls - cost);
 	_on_build_success_arcade()
 	pass # Replace with function body.
+func _on_time_remaining_pay_up() -> void:
+	setSouls($Camera3D/Control/HBoxContainer/Money.souls - $Camera3D/Control/HBoxContainer2/timeRemaining.pay_ammount)
+	pass # Replace with function body.

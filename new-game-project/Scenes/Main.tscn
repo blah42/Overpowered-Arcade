@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d1dwu0n16uhxt"]
+[gd_scene load_steps=25 format=3 uid="uid://d1dwu0n16uhxt"]
 
 [ext_resource type="Script" uid="uid://b8mgwjyhy08u2" path="res://Scripts/Main.gd" id="1_4kpch"]
 [ext_resource type="PackedScene" uid="uid://cnsy43flhim3f" path="res://Scenes/testing_map.tscn" id="1_r150o"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dahog10wowwqv" path="res://assets/kenney_mini-arcade/Previews/arcade-machine.png" id="5_bmxlf"]
 [ext_resource type="Theme" uid="uid://burs0ps80gsj4" path="res://UI/UI_theme.tres" id="5_vy5pj"]
 [ext_resource type="Texture2D" uid="uid://iny8apvvjlmh" path="res://assets/kenney_mini-arcade/Previews/air-hockey.png" id="6_4kpch"]
-[ext_resource type="Texture2D" uid="uid://bfievccggart6" path="res://assets/kenney_cursor-pixel-pack/Tiles/tile_0189.png" id="6_bmxlf"]
 [ext_resource type="Texture2D" uid="uid://bjd406ru51nkt" path="res://assets/kenney_1-bit-input-prompts-pixel-16/Tiles (White)/tile_0327.png" id="7_bmxlf"]
 [ext_resource type="Texture2D" uid="uid://bno7r0wkqroq" path="res://assets/kenney_mini-arcade/Previews/basketball-game.png" id="7_grg3l"]
 [ext_resource type="Script" uid="uid://cql5wssue6c8q" path="res://Scripts/air_hockey_button.gd" id="8_grg3l"]
@@ -21,7 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://c081fcutn1bok" path="res://assets/kenney_mini-arcade/Previews/pinball.png" id="16_4n42c"]
 [ext_resource type="Script" uid="uid://brltjte5kv2fc" path="res://Scripts/pinball_button.gd" id="17_c5snn"]
 [ext_resource type="Texture2D" uid="uid://huogy6ocgh5v" path="res://assets/kenney_mini-arcade/Previews/vending-machine.png" id="18_xvtyr"]
+[ext_resource type="Texture2D" uid="uid://2d8jpf2utftg" path="res://assets/kenney_1-bit-input-prompts-pixel-16/Tiles (White)/tile_0684.png" id="19_3tgeq"]
 [ext_resource type="Script" uid="uid://bpbwqadutusbk" path="res://Scripts/vending_machine_button.gd" id="19_u7mjy"]
+[ext_resource type="Texture2D" uid="uid://bod2lqarl2csa" path="res://assets/kenney_1-bit-input-prompts-pixel-16/Tiles (White)/tile_0567.png" id="23_c4ay3"]
+[ext_resource type="Script" uid="uid://hb4g0tnn3i0u" path="res://Scripts/time_to_pay.gd" id="24_aht7i"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_4kpch")
@@ -131,10 +133,10 @@ anchor_left = 0.018
 anchor_top = -3.906
 anchor_right = 0.018
 anchor_bottom = -3.906
-offset_left = 2.35403
-offset_top = 5.06226
+offset_left = 2.35404
+offset_top = -0.937836
 offset_right = 89.354
-offset_bottom = 30.0623
+offset_bottom = 30.0622
 theme = ExtResource("5_vy5pj")
 theme_override_constants/separation = 5
 
@@ -143,26 +145,27 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Camera3D/Control/HBoxContainer/AspectRatioContainer"]
 layout_mode = 2
-texture = ExtResource("6_bmxlf")
+texture = ExtResource("19_3tgeq")
 
 [node name="Money" type="RichTextLabel" parent="Camera3D/Control/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_vy5pj")
+fit_content = true
 vertical_alignment = 1
 script = ExtResource("13_h1m7h")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Camera3D/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.84
-anchor_top = -3.976
-anchor_right = 0.84
-anchor_bottom = -3.976
-offset_left = -0.478394
-offset_top = 1.95224
-offset_right = 178.522
-offset_bottom = 39.9522
+anchor_left = 0.844
+anchor_top = -3.85
+anchor_right = 0.844
+anchor_bottom = -3.85
+offset_left = -0.0664062
+offset_top = -0.0498047
+offset_right = 173.934
+offset_bottom = 23.9502
 theme = ExtResource("5_vy5pj")
 theme_override_constants/separation = 5
 
@@ -179,6 +182,36 @@ size_flags_horizontal = 3
 theme = ExtResource("5_vy5pj")
 vertical_alignment = 1
 script = ExtResource("14_1p5hy")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Camera3D/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.018
+anchor_top = -3.906
+anchor_right = 0.02
+anchor_bottom = -3.906
+offset_left = 2.35404
+offset_top = 36.0622
+offset_right = 67.06
+offset_bottom = 52.0622
+theme = ExtResource("5_vy5pj")
+theme_override_constants/separation = 5
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Camera3D/Control/HBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Camera3D/Control/HBoxContainer2/AspectRatioContainer"]
+layout_mode = 2
+texture = ExtResource("23_c4ay3")
+
+[node name="timeRemaining" type="RichTextLabel" parent="Camera3D/Control/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_vy5pj")
+text = "20"
+fit_content = true
+vertical_alignment = 1
+script = ExtResource("24_aht7i")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 debug_shape_custom_color = Color(0.819608, 0, 0, 1)
@@ -199,3 +232,4 @@ omni_range = 74.225
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/BasketballButton" to="." method="_on_basketball_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/PinballButton" to="." method="_on_pinball_button_pressed"]
 [connection signal="pressed" from="Camera3D/Control/buy_bar/ScrollContainer/HBoxContainer/VendingMachineButton" to="." method="_on_vending_machine_button_pressed"]
+[connection signal="payUp" from="Camera3D/Control/HBoxContainer2/timeRemaining" to="." method="_on_time_remaining_pay_up"]
