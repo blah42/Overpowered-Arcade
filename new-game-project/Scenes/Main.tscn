@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://b8mgwjyhy08u2" path="res://Scripts/Main.gd" id="1_4kpch"]
 [ext_resource type="PackedScene" uid="uid://cnsy43flhim3f" path="res://Scenes/testing_map.tscn" id="1_r150o"]
 [ext_resource type="Texture2D" uid="uid://7al216188uu3" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_l.png" id="2_jw32o"]
-[ext_resource type="PackedScene" uid="uid://ddbd77whg8g7p" path="res://Scenes/GenericEnemies.tscn" id="2_jyqft"]
 [ext_resource type="Texture2D" uid="uid://tp8jk8wqqv16" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_m.png" id="3_50glp"]
 [ext_resource type="Script" uid="uid://0h4v6vvfa257" path="res://Scripts/buy_bar.gd" id="3_frkhe"]
 [ext_resource type="Texture2D" uid="uid://0q7wa0m1bcle" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_r.png" id="4_vy5pj"]
