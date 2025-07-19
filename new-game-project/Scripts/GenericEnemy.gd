@@ -35,6 +35,7 @@ func _physics_process(_delta):
 			print("Ignored")
 			pass
 	#print($GenericEnemies.Transform.position.x)
+
 	if path.progress_ratio==1:
 		queue_free()
 
