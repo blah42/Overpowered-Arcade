@@ -11,11 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://bd60oxjejtqfl" path="res://assets/kenney_mini-arcade/Previews/basketball-game.png" id="7_xwpce"]
 
 [sub_resource type="Curve3D" id="Curve3D_mneyp"]
+bake_interval = 30.35
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.74823, -1.12032, 0.517052, 0, 0, 0, 0, 0, 0, -0.176001, -0.693139, -3.04516, 0, 0, 0, 0, 0, 0, 6.66649, -0.852467, 0.739532),
-"tilts": PackedFloat32Array(0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5.51473, -0.53836, -1.63009, 0, 0, 0, 0, 0, 0, -4.90899, -0.500025, -1.89678, 0, 0, 0, 0, 0, 0, -3.90354, -0.500025, -2.64568, 0, 0, 0, 0, 0, 0, -2.51621, -0.48133, -2.93467, 0, 0, 0, 0, 0, 0, -0.176001, -0.449794, -2.26345, 0, 0, 0, 0, 0, 0, 2.11738, -0.444096, -0.989637, 0, 0, 0, 0, 0, 0, 4.40832, -0.438281, -0.0418352, 0, 0, 0, 0, 0, 0, 6.66649, -0.432611, 0.739532),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
 }
-point_count = 3
+point_count = 8
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_mneyp")
@@ -113,10 +114,7 @@ omni_range = 74.225
 autostart = true
 
 [node name="SpawnPath" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24014, -0.383059)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90457, 4.95803)
 curve = SubResource("Curve3D_mneyp")
-
-[node name="StartLocation" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.12974, 0.332049, -0.164988)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

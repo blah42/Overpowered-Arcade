@@ -17,8 +17,8 @@ func _on_timer_timeout() -> void:
 	pathTracker.loop = false
 	$SpawnPath.add_child(pathTracker)
 
-
-	mob.initialize($StartLocation.position, pathTracker)
+	pathTracker.progress_ratio = 0
+	mob.initialize(pathTracker.position, pathTracker)
 
 	# Spawn the mob by adding it to the Main scene.
 	#add_child(mob)

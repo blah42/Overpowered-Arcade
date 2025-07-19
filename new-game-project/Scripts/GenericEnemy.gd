@@ -20,7 +20,7 @@ func _physics_process(_delta):
 	#if not offset.is_zero_approx():
 		#look_at(global_position + offset, Vector3.UP)
 	path.progress	+= character_speed*_delta
-	print(path.progress)
+	#print(path.progress)
 	if path.progress_ratio==1:
 		queue_free()
 
@@ -29,10 +29,11 @@ func initialize(start_position, chosenPath: PathFollow3D):
 	# We position the mob by placing it at start_position
 	# and rotate it towards player_position, so it looks at the player.
 	path = chosenPath
-	look_at_from_position(start_position, Vector3.FORWARD, Vector3.UP)
+	self.position = start_position
+	#look_at_from_position(start_position, Vector3.FORWARD, Vector3.UP)
 	# Rotate this mob randomly within range of -45 and +45 degrees,
 	# so that it doesn't move directly towards the player.
-	#rotate_y(randf_range(-PI / 4, PI / 4))
+	rotate_y(-PI)
 
 	# We calculate a random speed (integer)
 	#var random_speed = randi_range(min_speed, max_speed)
