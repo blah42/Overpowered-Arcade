@@ -1,7 +1,7 @@
 [gd_resource type="MeshLibrary" load_steps=34 format=4 uid="uid://bsc8kjvyrit5v"]
 
-[ext_resource type="Texture2D" uid="uid://bqqouolgcp0og" path="res://assets/kenney_mini-arcade/Models/GLB format/Textures/colormap.png" id="1_1jcjq"]
-[ext_resource type="Texture2D" uid="uid://b8nti726xmwtq" path="res://assets/kenney_mini-arcade/Models/FBX format/Textures/colormap.png" id="2_j5dsa"]
+[ext_resource type="Texture2D" uid="uid://bcq28gjhlibbj" path="res://assets/kenney_mini-arcade/Models/GLB format/Textures/colormap.png" id="1_1jcjq"]
+[ext_resource type="Texture2D" uid="uid://dn0ifrg1iiv35" path="res://assets/kenney_mini-arcade/Models/FBX format/Textures/colormap.png" id="2_j5dsa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3youq"]
 resource_name = "colormap"
