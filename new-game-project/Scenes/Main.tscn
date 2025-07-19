@@ -37,6 +37,9 @@ point_count = 2
 script = ExtResource("1_4kpch")
 mob_scene = ExtResource("2_jyqft")
 
+[node name="Node3D" parent="." instance=ExtResource("25_c4ay3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53215, 0, -4.67908)
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.618175, 0.78604, 0, -0.78604, 0.618175, 0, 8.36385, 6.28376)
 projection = 1
@@ -223,14 +226,14 @@ script = ExtResource("13_h1m7h")
 [node name="HBoxContainer3" type="HBoxContainer" parent="Camera3D/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.84
-anchor_top = -3.976
-anchor_right = 0.84
-anchor_bottom = -3.976
-offset_left = -0.478394
-offset_top = 1.95224
-offset_right = 178.522
-offset_bottom = 39.9522
+anchor_left = 0.878
+anchor_top = -3.724
+anchor_right = 0.878
+anchor_bottom = -3.724
+offset_left = -0.0643311
+offset_top = -0.0517883
+offset_right = 142.936
+offset_bottom = 37.9482
 theme = ExtResource("5_vy5pj")
 theme_override_constants/separation = 5
 
@@ -296,9 +299,6 @@ autostart = true
 curve = SubResource("Curve3D_hwpts")
 
 [node name="ArcadeUnits" type="Node3D" parent="."]
-
-[node name="Node3D" parent="." instance=ExtResource("25_c4ay3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53215, 0, -4.67908)
 
 [connection signal="make_menu_bar_invisible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_invisible"]
 [connection signal="make_menu_bar_visible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_visible"]
