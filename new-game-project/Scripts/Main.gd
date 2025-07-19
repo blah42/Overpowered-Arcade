@@ -215,7 +215,7 @@ func _on_mob_timer_timeout() -> void:
 	dupliPath.add_child(pathTracker)
 
 	pathTracker.progress_ratio = 0
-	mob.initialize(dupliPath, pathTracker, $ArcadeUnits)
+	mob.initialize(dupliPath, pathTracker, $ArcadeUnits, $Camera3D/Control/HBoxContainer/Money.souls)
 
 	# Spawn the mob by adding it to the Main scene.
 	#add_child(mob)
