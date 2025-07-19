@@ -1,7 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://d1dwu0n16uhxt"]
 
 [ext_resource type="Script" uid="uid://b8mgwjyhy08u2" path="res://Scripts/Main.gd" id="1_4kpch"]
-[ext_resource type="PackedScene" uid="uid://cnsy43flhim3f" path="res://Scenes/testing_map.tscn" id="1_r150o"]
 [ext_resource type="Texture2D" uid="uid://7al216188uu3" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_l.png" id="2_jw32o"]
 [ext_resource type="PackedScene" uid="uid://ddbd77whg8g7p" path="res://Scenes/GenericEnemies.tscn" id="2_jyqft"]
 [ext_resource type="Texture2D" uid="uid://tp8jk8wqqv16" path="res://assets/kenney_ui-pack-space-expansion/PNG/Grey/Double/bar_round_gloss_large_m.png" id="3_50glp"]
@@ -25,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://c4f3lt6ke8vuq" path="res://assets/kenney_mini-arcade/Previews/vending-machine.png" id="18_xvtyr"]
 [ext_resource type="Script" uid="uid://bpbwqadutusbk" path="res://Scripts/vending_machine_button.gd" id="19_u7mjy"]
 [ext_resource type="Script" uid="uid://nox86twqpnv8" path="res://Scripts/time_to_pay.gd" id="21_3tgeq"]
+[ext_resource type="PackedScene" uid="uid://bwi84ll7heje6" path="res://Scenes/map.tscn" id="25_c4ay3"]
 
 [sub_resource type="Curve3D" id="Curve3D_hwpts"]
 _data = {
@@ -36,9 +36,6 @@ point_count = 2
 [node name="Main2" type="Node3D"]
 script = ExtResource("1_4kpch")
 mob_scene = ExtResource("2_jyqft")
-
-[node name="Node3D" parent="." instance=ExtResource("1_r150o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35559, 0, -4.25476)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.618175, 0.78604, 0, -0.78604, 0.618175, 0, 8.36385, 6.28376)
@@ -299,6 +296,9 @@ autostart = true
 curve = SubResource("Curve3D_hwpts")
 
 [node name="ArcadeUnits" type="Node3D" parent="."]
+
+[node name="Node3D" parent="." instance=ExtResource("25_c4ay3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53215, 0, -4.67908)
 
 [connection signal="make_menu_bar_invisible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_invisible"]
 [connection signal="make_menu_bar_visible" from="." to="Camera3D/Control/buy_bar" method="_on_main_make_menu_bar_visible"]
