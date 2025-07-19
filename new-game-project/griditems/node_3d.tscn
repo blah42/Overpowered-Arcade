@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cpgccs1jkx64b" path="res://assets/converted_assets/wall_corner_2.tscn" id="3_2hg0m"]
 [ext_resource type="PackedScene" uid="uid://exgo6dmldtk7" path="res://assets/converted_assets/wall_door_rotate_2.tscn" id="4_vndw2"]
 [ext_resource type="PackedScene" uid="uid://b8g4qefmewcw1" path="res://assets/converted_assets/wall_window_2.tscn" id="5_fma6k"]
-[ext_resource type="PackedScene" uid="uid://c7jrfu8qd4b64" path="res://assets/converted_assets/floor_alt.tscn" id="6_8y124"]
+[ext_resource type="PackedScene" uid="uid://btc4wrpqcgu87" path="res://assets/converted_assets/button_floor_square_2.tscn" id="6_8y124"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -24,5 +24,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.30442, 0, -0.301101)
 [node name="floor" parent="." instance=ExtResource("1_p7pt6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.91211, 0, 0)
 
-[node name="floor2" parent="." instance=ExtResource("6_8y124")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0783, 0, 0)
+[node name="button-floor-square2" parent="." instance=ExtResource("6_8y124")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.17943, 0, 0.0698304)
