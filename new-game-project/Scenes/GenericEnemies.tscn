@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=7 format=3 uid="uid://ddbd77whg8g7p"]
 
 [ext_resource type="Script" uid="uid://27y757nl5fd5" path="res://Scripts/GenericEnemy.gd" id="1_k1y1j"]
@@ -68,6 +69,7 @@ _data = {
 }
 
 [node name="GenericEnemies" type="CharacterBody3D"]
+
 script = ExtResource("1_k1y1j")
 
 [node name="Pivot" type="Node3D" parent="."]
