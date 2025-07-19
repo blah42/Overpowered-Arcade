@@ -11,9 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://bd60oxjejtqfl" path="res://assets/kenney_mini-arcade/Previews/basketball-game.png" id="7_xwpce"]
 
 [sub_resource type="Curve3D" id="Curve3D_mneyp"]
-closed = true
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.33724, 0.794217, -0.0833864, 0, 0, 0, 0, 0, 0, -1.84681, 2.06698, 0.128963, 0, 0, 0, 0, 0, 0, 0.821971, 1.48366, 0.569384),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.74823, -1.12032, 0.517052, 0, 0, 0, 0, 0, 0, -0.176001, -0.693139, -3.04516, 0, 0, 0, 0, 0, 0, 6.66649, -0.852467, 0.739532),
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3
@@ -114,11 +113,8 @@ omni_range = 74.225
 autostart = true
 
 [node name="SpawnPath" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.64001, -0.383059)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24014, -0.383059)
 curve = SubResource("Curve3D_mneyp")
-
-[node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
-transform = Transform3D(-0.0849579, -0.45213, -0.887896, -1.49012e-08, 0.891119, -0.45377, 0.996384, -0.0385514, -0.0757076, -4.33724, 0.794217, -0.0833864)
 
 [node name="StartLocation" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.12974, 0.332049, -0.164988)

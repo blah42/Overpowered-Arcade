@@ -14,6 +14,7 @@ func _on_timer_timeout() -> void:
 	# We store the reference to the SpawnLocation node.
 	#var mob_spawn_location = get_node("SpawnPath/SpawnLocation")
 	var pathTracker = PathFollow3D.new()
+	pathTracker.loop = false
 	$SpawnPath.add_child(pathTracker)
 
 

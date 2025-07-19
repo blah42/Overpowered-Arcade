@@ -20,7 +20,9 @@ func _physics_process(_delta):
 	#if not offset.is_zero_approx():
 		#look_at(global_position + offset, Vector3.UP)
 	path.progress	+= character_speed*_delta
-	#print(path.progress)
+	print(path.progress)
+	if path.progress_ratio==1:
+		queue_free()
 
 # This function will be called from the Main scene.
 func initialize(start_position, chosenPath: PathFollow3D):
