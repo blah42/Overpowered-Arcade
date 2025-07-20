@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://boi18jm0ct4un"]
 
 [ext_resource type="Script" uid="uid://knqmgpyise32" path="res://Scripts/ArcadeMachine.gd" id="1_7ujrr"]
-[ext_resource type="PackedScene" uid="uid://cxojuwnolmdhl" path="res://assets/kenney_mini-arcade/Models/GLB format/air-hockey.glb" id="1_gone1"]
+[ext_resource type="PackedScene" uid="uid://l4p16tckvdxa" path="res://assets/kenney_mini-arcade/Models/GLB format/air-hockey.glb" id="1_gone1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7ujrr"]
 size = Vector3(1.03979, 0.567871, 1)
