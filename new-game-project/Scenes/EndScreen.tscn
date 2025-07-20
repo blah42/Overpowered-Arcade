@@ -17,7 +17,6 @@ offset_bottom = 1087.0
 texture = ExtResource("1_gcms0")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
-
 layout_mode = 0
 offset_left = 1621.0
 offset_top = 373.0
