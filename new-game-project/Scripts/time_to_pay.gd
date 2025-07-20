@@ -7,7 +7,7 @@ var previous = 0
 func _ready():
 	timer = Timer.new()
 	timer.timeout.connect(_on_timer_timeout) 
-	timer.set_wait_time(1)
+	timer.set_wait_time(5)
 	add_child(timer) 
 	timer.start()
 	self.text = str(timer.get_time_left());
@@ -20,5 +20,5 @@ func _process(delta: float) -> void:
 func _on_timer_timeout():
 	timer.set_wait_time(1)
 	payUp.emit();
-	pay_ammount = int(floor(pay_ammount*1.25))
+	pay_ammount = int(floor(pay_ammount*1.1))
 	pass
