@@ -10,6 +10,8 @@ data = PackedVector3Array(-0.2354, 0.7354, 0.2, -0.2, 0.75, 0.2, 0.2, 0.75, 0.2,
 script = ExtResource("2_0tgh0")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="vending-machine" index="0"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="vending-machine/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_0tgh0")
