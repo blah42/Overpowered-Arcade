@@ -30,6 +30,8 @@ func _physics_process(_delta):
 		
 	if not acquiring and not playing:
 		var obj = $"RayCast3D".get_collider()
+		if obj==null: obj = $"RayCast3D2".get_collider()
+		if obj==null: obj = $"RayCast3D3".get_collider()
 		if(not obj==null):
 			print("Arcade Detected")
 			if(not obj.taken and not obj == arcadeTitle):

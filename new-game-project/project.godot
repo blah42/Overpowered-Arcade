@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Overpowered-Arcade"
-run/main_scene="uid://d1dwu0n16uhxt"
+run/main_scene="uid://cnilbu8hqlnai"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/image="uid://e8firloca4ww"
 config/icon="uid://b2t5fcj6aqlq8"
