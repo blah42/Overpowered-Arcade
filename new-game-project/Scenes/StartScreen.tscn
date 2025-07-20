@@ -1,8 +1,10 @@
+
 [gd_scene load_steps=4 format=3 uid="uid://5weivsx1i7vp"]
 
 [ext_resource type="FontFile" uid="uid://b26fh6nbulj3p" path="res://assets/kenney_ui-pack-space-expansion/Font/Kenney Future.ttf" id="1_usjih"]
 [ext_resource type="PackedScene" uid="uid://bwi84ll7heje6" path="res://Scenes/map.tscn" id="1_vh7hs"]
 [ext_resource type="Script" uid="uid://dtl162qoqtx7a" path="res://Scripts/StartButton.gd" id="2_3u666"]
+
 
 [node name="Node3D" type="Node3D"]
 

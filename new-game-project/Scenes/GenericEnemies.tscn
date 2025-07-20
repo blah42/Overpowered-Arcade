@@ -133,3 +133,13 @@ libraries = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.454799, 0.20947)
 target_position = Vector3(0, 0, 1)
 collision_mask = 2
+
+[node name="RayCast3D2" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.430123, 0)
+target_position = Vector3(0.58, 0, 1)
+collision_mask = 2
+
+[node name="RayCast3D3" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.433676, 0)
+target_position = Vector3(-0.54, 0, 1)
+collision_mask = 3
