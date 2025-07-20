@@ -17,9 +17,17 @@ signal score_changed;
 @onready var cam: Camera3D = $Camera3D
 @export var mob_scene: PackedScene
 
+
+func _on_remove_tile_button_pressed():
+	#make click sound
+	#AudioStreamPlayer.
+	make_menu_bar_invisible.emit()
+	$Camera3D/Control/ColorRect/DeleteButton.visible = true;
+	pass # Replace with function body.
 func _on_build_tile_button_pressed():
 	#make click sound
 	#AudioStreamPlayer.
+	$Camera3D/Control/ColorRect/DeleteButton.visible = false;
 	make_menu_bar_visible.emit();
 	pass # Replace with function body.
 #####################################################################################################
@@ -90,8 +98,6 @@ func setScore(value):
 	$Camera3D/Control/HBoxContainer3/Score.score = value;
 	score_changed.emit();
 	pass # Replace with function body.
-
-	
 const RAY_LENGTH = 100
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
@@ -113,16 +119,29 @@ func _input(event: InputEvent) -> void:
 					selected_object.position.z = object.global_position.z+.25;
 					_on_build_tile_button_pressed()
 				"AirHockey":
+					selected_object = colission;
+				
+					_on_remove_tile_button_pressed()
 					print("Remove?")
 				"Pinball":
+					selected_object = colission;
+					_on_remove_tile_button_pressed()
 					print("Remove?")
 				"DanceMachine":
+					selected_object = colission;
+					_on_remove_tile_button_pressed()
 					print("Remove?")
 				"arcadeMachine":
+					selected_object = colission;
+					_on_remove_tile_button_pressed()
 					print("Remove?")
 				"basketballGame":
+					selected_object = colission;
+					_on_remove_tile_button_pressed()
 					print("Remove?")
 				"VendingMachine":
+					selected_object = colission;
+					_on_remove_tile_button_pressed()
 					print("Remove?")
 				_:
 					make_menu_bar_invisible.emit()
@@ -226,4 +245,9 @@ func _on_mob_timer_timeout() -> void:
 
 func _on_timer_pay_up() -> void:
 	setSouls($Camera3D/Control/HBoxContainer/Money.souls - $Camera3D/Control/HBoxContainer4/timer.pay_ammount)
+	pass # Replace with function body.
+
+
+func _on_delete_button_pressed() -> void:
+	selected_object.collider.queue_free()
 	pass # Replace with function body.
