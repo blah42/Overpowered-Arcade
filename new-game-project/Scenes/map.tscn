@@ -2,13 +2,13 @@
 
 [ext_resource type="MeshLibrary" uid="uid://bsc8kjvyrit5v" path="res://griditems/meshlib.tres" id="1_26yhd"]
 [ext_resource type="PackedScene" uid="uid://btc4wrpqcgu87" path="res://assets/converted_assets/button_floor_square_2.tscn" id="2_p3ir5"]
-[ext_resource type="PackedScene" uid="uid://b1c07rmtpkpps" path="res://assets/kenney_mini-arcade/Models/GLB format/prize-wheel.glb" id="3_np2xp"]
-[ext_resource type="PackedScene" uid="uid://073lqkwjykkp" path="res://assets/kenney_mini-arcade/Models/GLB format/prizes.glb" id="4_w7jjh"]
-[ext_resource type="PackedScene" uid="uid://by1ck3te78hrq" path="res://assets/kenney_mini-arcade/Models/GLB format/cash-register.glb" id="5_6q3n4"]
-[ext_resource type="PackedScene" uid="uid://c8bdn10viwech" path="res://assets/kenney_prototype-kit/Models/GLB format/shape-cylinder.glb" id="6_4c2oa"]
-[ext_resource type="PackedScene" uid="uid://bn4pfbdkowopv" path="res://assets/kenney_prototype-kit/Models/GLB format/figurine.glb" id="7_w7jjh"]
+[ext_resource type="PackedScene" uid="uid://7i232nggp52d" path="res://assets/kenney_mini-arcade/Models/GLB format/prize-wheel.glb" id="3_np2xp"]
+[ext_resource type="PackedScene" uid="uid://dashp61bcsp63" path="res://assets/kenney_mini-arcade/Models/GLB format/prizes.glb" id="4_w7jjh"]
+[ext_resource type="PackedScene" uid="uid://on726h74n6oy" path="res://assets/kenney_mini-arcade/Models/GLB format/cash-register.glb" id="5_6q3n4"]
+[ext_resource type="PackedScene" uid="uid://b1r8jbpejkc1l" path="res://assets/kenney_prototype-kit/Models/GLB format/shape-cylinder.glb" id="6_4c2oa"]
+[ext_resource type="PackedScene" uid="uid://dy6kjh6bqeida" path="res://assets/kenney_prototype-kit/Models/GLB format/figurine.glb" id="7_w7jjh"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_26yhd")
