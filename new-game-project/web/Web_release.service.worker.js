@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1752980059|31542029274';
+const CACHE_VERSION = '1752982811|2038012110';
 /** @type {string} */
 const CACHE_PREFIX = 'Overpowered-Arca-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
