@@ -110,6 +110,7 @@ func _input(event: InputEvent) -> void:
 		var colission = space_state.intersect_ray(query)
 		if(colission):
 			var object = colission.collider
+			print(object.name)
 			match object.name:
 				"Placement_tile":
 					#print(object.global_position)
@@ -130,7 +131,7 @@ func _input(event: InputEvent) -> void:
 					selected_object = colission;
 					_on_remove_tile_button_pressed()
 					print("Remove?")
-				"arcadeMachine":
+				"ArcadeMachine":
 					selected_object = colission;
 					_on_remove_tile_button_pressed()
 					print("Remove?")
@@ -142,7 +143,12 @@ func _input(event: InputEvent) -> void:
 					selected_object = colission;
 					_on_remove_tile_button_pressed()
 					print("Remove?")
+
 				_:
+					if(object.name.contains("CharacterBody3D")):
+						selected_object = colission;
+						_on_remove_tile_button_pressed()
+						print("Remove?")
 					make_menu_bar_invisible.emit()
 				
 			

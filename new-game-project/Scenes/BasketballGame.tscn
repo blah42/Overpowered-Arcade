@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cy8ekefqbo3k1" path="res://Scripts/basketball_game.gd" id="1_avbc2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_avbc2"]
-size = Vector3(0.742676, 0.876434, 1.03119)
+size = Vector3(1, 0.990356, 1)
 
 [node name="BasketballGame" type="CharacterBody3D"]
 collision_layer = 2
@@ -16,5 +16,5 @@ script = ExtResource("1_avbc2")
 [node name="basketball-game2" parent="Node3D" instance=ExtResource("1_ank7h")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00298572, 0.424729, 0.00850731)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.473938, 0)
 shape = SubResource("BoxShape3D_avbc2")

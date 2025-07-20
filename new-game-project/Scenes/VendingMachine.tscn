@@ -3,20 +3,18 @@
 [ext_resource type="PackedScene" uid="uid://b142tkdmhld82" path="res://assets/kenney_mini-arcade/Models/GLB format/vending-machine.glb" id="1_n8h4g"]
 [ext_resource type="Script" uid="uid://dk78sj7g3pt4a" path="res://Scripts/vending_machine.gd" id="2_0tgh0"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_2fke6"]
-size = Vector3(0.646011, 0.765594, 0.6894)
+[sub_resource type="BoxShape3D" id="BoxShape3D_0tgh0"]
+size = Vector3(1, 0.990356, 1)
 
 [node name="VendingMachine" type="CharacterBody3D"]
 script = ExtResource("2_0tgh0")
 
-
-[node name="StaticBody3D" type="StaticBody3D" parent="vending-machine" index="0"]
+[node name="vending-machine#StaticBody3D" type="StaticBody3D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
+[node name="Node3D#vending-machine2" parent="." instance=ExtResource("1_n8h4g")]
 
-[node name="vending-machine2" parent="Node3D" instance=ExtResource("1_n8h4g")]
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000831604, 0.364151, 0.01894)
-shape = SubResource("BoxShape3D_2fke6")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.473938, 0)
+shape = SubResource("BoxShape3D_0tgh0")
