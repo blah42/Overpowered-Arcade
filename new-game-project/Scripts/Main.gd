@@ -92,7 +92,8 @@ func _on_build_success_vend():
 #####################################################################################################	
 func setSouls(value):
 	$Camera3D/Control/HBoxContainer/Money.souls = value;
-	if($Camera3D/Control/HBoxContainer/Money.souls <= 0): return; #Game over condition
+	if($Camera3D/Control/HBoxContainer/Money.souls <= 0): 
+		get_tree().change_scene_to_file("res://Scenes/EndScreen.tscn"); #Game over condition
 	souls_changed.emit();
 func setScore(value):
 	$Camera3D/Control/HBoxContainer3/Score.score = value;
