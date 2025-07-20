@@ -8,7 +8,7 @@ var arcade_machine = preload("res://Scenes/ArcadeMachine.tscn")
 var basketball = preload("res://Scenes/BasketballGame.tscn")
 var dance = preload("res://Scenes/DanceMachine.tscn")
 var pinball = preload("res://Scenes/Pinball.tscn")
-var vendingMachine = preload("res://Scenes/DanceMachine.tscn")
+var vendingMachine = preload("res://Scenes/VendingMachine.tscn")
 @export var selected_object = null;
 signal make_menu_bar_visible;
 signal make_menu_bar_invisible;
@@ -120,7 +120,6 @@ func _input(event: InputEvent) -> void:
 					_on_build_tile_button_pressed()
 				"AirHockey":
 					selected_object = colission;
-				
 					_on_remove_tile_button_pressed()
 					print("Remove?")
 				"Pinball":
@@ -135,7 +134,7 @@ func _input(event: InputEvent) -> void:
 					selected_object = colission;
 					_on_remove_tile_button_pressed()
 					print("Remove?")
-				"basketballGame":
+				"BasketballGame":
 					selected_object = colission;
 					_on_remove_tile_button_pressed()
 					print("Remove?")
@@ -250,4 +249,6 @@ func _on_timer_pay_up() -> void:
 
 func _on_delete_button_pressed() -> void:
 	selected_object.collider.queue_free()
+	$Camera3D/Control/ColorRect/DeleteButton.visible = false;
+	selected_object = null
 	pass # Replace with function body.
