@@ -120,7 +120,6 @@ func _input(event: InputEvent) -> void:
 					_on_build_tile_button_pressed()
 				"AirHockey":
 					selected_object = colission;
-				
 					_on_remove_tile_button_pressed()
 					print("Remove?")
 				"Pinball":
@@ -135,7 +134,7 @@ func _input(event: InputEvent) -> void:
 					selected_object = colission;
 					_on_remove_tile_button_pressed()
 					print("Remove?")
-				"basketballGame":
+				"BasketballGame":
 					selected_object = colission;
 					_on_remove_tile_button_pressed()
 					print("Remove?")
